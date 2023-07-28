@@ -1,0 +1,122 @@
+/* ---------------------------  CSS PAGE SERVICIOS -------------------- */
+.body-servicios{
+    background-color: $fondo-oscuro;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+    "header header"
+    "main main"
+    "section section"
+    "footer footer";
+}
+/* header index el mismo en todos POR AHORA... */
+.header-index{
+    grid-area: header;
+}
+/* main servicios */
+.main-servicios{
+    grid-area: main;
+    display: flex;
+}
+@if $estiloPorfolio == aniversario-1°{
+    .body-servicios{
+        background-color: #4F200D;                                    
+    }
+}
+@else{
+    .body-index{
+        background-color: $fondo-oscuro
+    }
+} 
+/* tarjetas de servicios */
+.card-servicios{
+    grid-area: section;
+    margin: 30px;
+    .mb-3{
+        width: 800px;
+    }
+}
+/* img de las targetas */
+.servicio-img{
+    grid-area: section;
+    margin-top: 30px;
+}
+/* texto de de img cambiantes */
+.carousel-caption p{
+    display: flex;
+    justify-content: center;    
+    grid-area: section;
+    color: white;
+    background-color: $fondo-oscuro;
+    padding: 5px;
+    .servicio-proximo{
+        display: inline;
+    }
+}
+.servicio-proximo{
+    display: flex;
+    justify-content: center;
+    .card, .mb-3{
+        margin: 30px;
+        width: 650px;
+    }
+    h3{
+        margin: 20px;
+        text-align: center;
+    }
+}
+
+/* botones con mini-form de eleccion de servicio */
+.mini-form-serv{
+    display: flex;
+    justify-content: start;
+    margin: 1px 15px;
+    .botones-servicio{
+        grid-area: section;
+        display: inline;
+        .enviar-servicios{
+            @include BtnEnviar(700, uppercase, 1s, pointer , 0.3em );
+            color: black;
+            font-size: 16px;
+            width: 360px;
+            height: 50px;
+            margin: 10px 150px ;
+            border-radius: 30px;
+            background-color: $fondo-perla;
+            &:hover{
+                background: linear-gradient($fondo-dorado , $fondo-amarillento);
+                box-shadow: 0 0 5px $fondo-amarillento,
+                0 0 25px $fondo-dorado,
+                0 0 50px $fondo-dorado,
+                0 0 100px $fondo-dorado
+            }
+        }  
+        h4{
+            text-align: center;
+            background-color: $fondo-dorado;
+        }
+        .btn-group{
+            display: flex;
+            height: 100px;
+            .btn{
+                background-color: $fondo-perla;
+                color: black;
+                border: solid black 3px ;
+                font-size: 16px;
+                font-weight: 700;
+                &:hover{
+                    background-color: $fondo-amarillento;
+                }
+                &:focus{
+                    background-color:$fondo-amarillento;
+                }
+            }
+        }
+    }
+}
+/* -------------------------- Footer Contacto / el mismo que contacto--- */
+.footer-contacto{
+    grid-area: footer;
+}
+/*------------------------------- Media Queries Servicios--------------------------- */

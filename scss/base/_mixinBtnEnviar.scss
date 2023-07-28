@@ -1,0 +1,7 @@
+@mixin BtnEnviar($f-weight, $t-transform, $transition, $cursor, $letter-spacing){
+    font-weight: $f-weight;
+    text-transform: $t-transform;
+    transition: $transition;
+    cursor: $cursor;
+    letter-spacing: $letter-spacing;
+}

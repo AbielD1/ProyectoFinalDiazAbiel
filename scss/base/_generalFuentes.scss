@@ -1,0 +1,18 @@
+/* Margen y padding universales */
+*{
+    padding: 0px;                     
+    margin: 0;
+}
+/* Fuemtes utilizadas */
+@font-face {
+    font-family:Roboto-Regular;
+    src: url(../Font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../Font/Roboto-Bold.ttf)
+}
+@font-face {
+    font-family: Nexa-Heavy;
+    src: url(../Font/Nexa-Heavy.ttf)
+}

@@ -1,0 +1,153 @@
+/* ---------------------------  CSS pages contacto -------------------- */
+/* BODY CONTACTO */
+.body-contacto{
+    background-color: $fondo-oscuro;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "section section section"
+    "article article article"
+    "footer footer footer";
+}
+/* HEADER-CONTACTO */
+.header-index{
+    grid-area: header;
+}
+/* MAIN-CONTACTO */
+.main-contacto{
+    grid-area: section;
+    background-image: url(../img/fondo-contacto-img.jpg);
+    display: flex;
+    justify-content: space-around;
+}   
+.info-articulo{
+    grid-area: main;
+    /* contenedor contacto */
+    h1{
+        background-color: $fondo-amarillento;
+        text-align: center;
+        font-size: 30px;
+        height: 40px;               
+        width: 160px;
+        margin: 30px ; 
+        font-family: "Roboto-Bold";
+    }
+    p{
+        grid-area: section;
+        background-color: $fondo-perla;
+        width: 360px;
+        padding: 15px;
+        margin: 30px;
+    }
+        /* Lista de contenido asociado */
+    .lista-asociados{
+        grid-area: section;
+        list-style: none;
+        padding: 10px;
+        grid-area: section;
+        background-color: $fondo-perla;
+        width: 260px;
+        height: 200px;                 
+        margin-left: 30px;
+        padding-left: 20px;
+    }
+    /* frase de que puedo realizar */
+    .frase-epica{
+        font-style: italic;
+        text-align: center;
+    }
+    .section__icon__apps{
+        grid-area: main;
+        text-align: left;
+        margin-left: 30px;
+        /* Separacion de iconos de redes y contactos */
+        a img{
+            width: 65px;
+            padding: 5px;
+            margin: 2px;
+        }
+        button{
+            border-radius: 20px;
+            border-color: $fondo-amarillento;
+            transition: all 0.5s;
+            &:hover{
+                transform: scale(0.85);
+            }
+        }
+    }
+@each $medios, $color in $medios-contacto{
+    ##{$medios}{
+        background-color: $color;
+    }
+}
+.form-contacto{
+    h2{
+        background-color: $fondo-amarillento;
+        font-size: 20px;
+        height: 40px;               
+        width: 390px;
+        margin: 15px 30px ;
+        padding: 5px; 
+    }
+    /* comentario de tu  interez */
+    #cometario{
+        margin: 20px 30px;
+        height: 100px;
+        border: $fondo-amarillento solid 5px;
+    }
+    #enviar-contacto{
+        @include BtnEnviar(700, uppercase, 1s, pointer , 0.3em );
+        height: 50px;
+        width: 250px;
+        margin: 0 0 15px 150px;
+        background-color: $fondo-perla;
+        border-radius: 10px;
+        color: black;
+        font-size: 16px;
+        &:hover{
+            background: radial-gradient(circle at center, $fondo-dorado, $fondo-amarillento);
+            box-shadow: 0 0 5px $fondo-amarillento,
+                        0 0 25px $fondo-amarillento,
+                        0 0 50px $fondo-amarillento,
+                        0 0 100px $fondo-amarillento
+            }
+        }
+    }
+}
+/* Mapa de ubicacion */
+.map{
+    grid-area: article;
+    
+    /* Mapa de ubicacion parrafo */
+    p{
+        background-color:$fondo-amarillento;
+        text-align: center;
+        font-size: 20px;
+        height: 30px;
+    }   
+}
+/* --------------------------FOOTER contato usado en pages  contacto y servicios----------------- */
+.footer-contacto{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #C07F00;         
+    height: 50px;  
+    a{
+        text-decoration: none;
+    }  
+    h3{
+        font-family: "Roboto-Bold";
+        color:$fondo-oscuro;
+        font-size: 35px;
+        &:hover{
+            color: white;
+            transition: 0.5s;
+        }  
+    }
+}
+
+/* ---------------------Media Queries Contactos -------------------------- */

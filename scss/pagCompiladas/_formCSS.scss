@@ -1,0 +1,135 @@
+/* --------------------------------------------------/* FORMULARIO -------------------------*/
+.body-form{
+    background-color: $fondo-oscuro;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-areas:
+    "header header "
+    "main main"
+    "form form"
+    "footer footer";
+}
+.header-form{
+    grid-area: header;
+}
+.main-form{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    h1{
+        grid-area: main;
+        background-color:$fondo-amarillento;
+        text-align: center;
+    }
+}
+/* condicional de modo-aniversario */
+@if $estiloPorfolio == aniversario-1°{
+    .body-form{
+        background-color: #4F200D;                                    
+    }
+}
+@else{
+    .body-index{
+        background-color: $fondo-oscuro
+    }
+} 
+ /* Separacion de los elementos del formulario + tipografia */
+label{
+    display: block;             
+    font-family: "Roboto-Regular";
+    font-size: 18px;
+}
+/* Iput textarea innline con fuente */
+input, textarea,.inline{
+    display:block;
+    font-family: "Roboto-Regular";
+    height: 30px;                    
+}
+/* Anchura de imput y select */
+input, select{
+    width: 100%;
+    height: 25px;                                
+}
+/* Separacion de los selectores de opciones */
+.form-select{
+    padding: 0;
+    margin: 10px 0;
+}
+/* dimenciones del formulario */
+form{
+    grid-area: form;
+    max-width: 700px;
+    min-width: 300px;
+    width: 80vw;            
+    padding:8px;
+}
+/* Boton enviar  personalizado*/
+input[id="submit"]{
+    @include BtnEnviar(700, uppercase, 1s, pointer , 0.3em );
+    margin:20px auto;
+    display: block;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;        
+    height: 40px;
+    background: $fondo-dorado;
+    border: $fondo-oscuro 2px solid;
+    border-radius: 10px;
+    color:black;
+    &:hover{
+        background: radial-gradient(circle at center, $fondo-dorado, $fondo-amarillento);
+        box-shadow: 0 0 5px $fondo-dorado,
+                    0 0 25px $fondo-dorado,
+                    0 0 50px $fondo-dorado,
+                    0 0 100px $fondo-dorado
+    }
+}
+.form-check-input:checked {
+    background-color: $fondo-dorado;
+    border-color: $fondo-oscuro;
+}
+/* fondo de los titulos del form */
+.opciones-titulo{
+    background-color: $fondo-dorado;
+    font-size: 25px;
+    padding:5px;
+    text-align: center;
+    font-weight: 700;
+}
+/* fonndo y margen de formulario  */
+fieldset {
+    background-color:$fondo-perla;
+    padding: 10px;           
+}
+p[type="text"]{
+    text-align:center;
+    margin-left:10px ;         
+}
+/* FOOTER FORM----el mismo que galeria----- */
+.footer-galeria{
+    grid-area: footer;
+}
+#dropdown{
+    margin: 10px 0;
+}
+.comentario h2{ 
+    text-align:center;
+    background-color: $fondo-dorado; 
+    font-family: "Roboto-Bold";
+    font-size: 25px;
+    padding: 5px;
+    #comentario-1{
+        height: 100px;
+        margin-bottom: 10px;
+    }
+}
+.titulo-01-serv h3{
+    background-color: $fondo-dorado;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    padding: 3px;
+    margin-top: 10px;
+}
+/*-------------------- Media Queries Formulario ---------------------- */

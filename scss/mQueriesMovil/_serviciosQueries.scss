@@ -1,0 +1,118 @@
+/*------------------------------- Media Queries Servicios--------------------------- */
+@media (min-width:320px) and (max-width:480px){
+    .body-servicios{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: start;
+        grid-template-areas: 
+        "header"
+        "main"
+        "section"
+        "footer";
+    }
+    /* header menu se quees elmismo que arriba lo tengo que cambiar. */
+    .header__menu{
+        grid-area: header;
+        .navbar{
+            justify-content: center;
+            width: 110px;
+            padding-left: 10px ;
+        }
+    }
+    .header__divLogo{
+        grid-area: header;
+    }
+    .header__menu__sector div ul{
+        margin-top: 10px;
+        li{
+            grid-area: header;
+            width: 100%;
+            height: 30px;
+            font-size: 12px;           
+        }
+    }
+    /* tarjetas de servicios  respnsive*/
+    .main-servicios{
+        grid-area: main ;
+        display: inline-block;
+        .card.body{
+            width: 200px;
+        }
+        .card-servicios{
+            text-align: center;
+            grid-area: section;
+            margin: 10px;
+            .mb-3{
+                width: 400px;
+                font-size: 12px;
+                margin-left: 30px;
+            }
+            .col-md-2 img{
+                height: 450px;
+                width: 250px;
+            }
+        }
+    /* img de las targetas */
+    .servicio-img{
+    grid-area: main;
+    display: inline-block;
+    margin-top: 0;
+    .carousel-inner{
+        width: 450px;
+        margin-left:20px ;
+    }
+        /* texto de de img cambiantes */
+        .carousel-caption p{
+            display: inline;
+            width: 400px;
+            color: white;
+            background-color: $fondo-oscuro;
+            padding: 5px;
+            .servicio-proximo{
+                display: inline;
+            }
+        }
+        .servicio-proximo{
+            .card, .mb-3{
+                margin: 30px;
+                width: 430px;
+            }
+        }
+    }
+    .mini-form-serv{
+        display: inline-block;
+        margin: 0;
+        .botones-servicio{
+            grid-area: section;
+            .enviar-servicios{
+                width: 380px;
+                height: 50px;
+                margin: 50px 30px 0 ;
+                &:active{
+                    background: linear-gradient($fondo-dorado , $fondo-amarillento);
+                }
+            }  
+            h4{
+                text-align: center;
+                padding: 4px;
+            }
+            .btn-group{
+                display: inline-block;
+                margin: 10px 0;
+                text-align: center;
+                width: 100%;
+                .btn{
+                    width: 100%;
+                    margin: 5px;
+                    &:active{
+                        background-color: $fondo-amarillento;
+                    }
+                    &:focus{
+                        background-color:$fondo-amarillento;
+                    }
+                }
+            }
+        }
+    }
+}
+}

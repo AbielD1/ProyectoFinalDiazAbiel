@@ -1,0 +1,161 @@
+/* ---------------------------  CSS pages ABOUT -------------------- */
+/* GRILLA DE LA PAGINA ABOUT */
+.body-about{
+    background-color: $fondo-oscuro;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main section"
+    "footer footer footer";
+}
+/* Mismo header del inicio para todas las paginas POR AHORA.. */
+.header-index{
+    grid-area: header;
+}
+/* Main about */
+.main-about{
+    grid-area: main;
+}
+/* contenedor Titulo de About  */
+.titulo-about{
+    grid-area: section;
+    background-color: $fondo-dorado;
+    width: 700px;                   
+    height: 70px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 20px 35%;
+    /*Titulo de About texto*/
+    h1{
+        grid-area: main;
+        padding: 5px;
+        font-size: 30px;
+    }
+}
+/* Img y biografia 1 de about me display flex*/
+.img-y-descripcion {
+    grid-area: section ;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+/* contenedor Parrafo 1 de biografia */
+.biografia-1{
+    grid-area: section;
+    display: block
+}
+/* Parr 1 de biografia */
+.parrafo1{
+    grid-area: section; 
+    background-color:$fondo-perla;
+    width: 700px;
+    padding: 20px;
+    height: 250px;                 
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-family: "Roboto-Regular";
+    margin-bottom: 20px;
+}
+
+/* CONTENEDOR TEXTO PARRAFO 2 */
+.biografia-2{
+    grid-area: section;
+    display: flex;
+    justify-content: left;
+}
+/* TEXTO PARRAFO 2 */
+.info-s2{
+    grid-area: section ;
+    display: inline;
+    margin: 30px;
+    font-size: 20px;
+    background-color:$fondo-perla;
+    padding: 15px;
+    line-height: 1.3;
+    font-family: "Roboto-Regular";
+}
+/* titulo seccion actividades */
+.auto-motivacion h2{
+    display: flex;
+    justify-content: center;
+    background: $fondo-dorado;
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Contenedor de hobbys */
+.article-about{
+    grid-area: section;
+    /* Titulo de hobbys */
+    h3{
+        color:#4C3D3D;
+        font-weight: 800;
+        background-color: $fondo-amarillento;
+        text-align: center;
+        padding: 10px;
+    }
+}
+/* Actividades Favoritas */
+.act-hobbys{
+    grid-area: section;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+/* Acordion de bootstrap con obejetivos y mi personalidad */
+.accordion{
+    margin: 0 20px 20px 10px;
+}
+.accordion-button{
+    background-color: $fondo-dorado;
+    border: $fondo-dorado;
+    &:not(.collapsed){
+        background-color: $fondo-amarillento;
+    }
+}
+.accordion-body{
+    background-color: $fondo-perla;
+}
+/* Lista de Hobbys */
+.list-group-item{
+    display: flex;
+    color:#4C3D3D;
+    background-color: $fondo-dorado;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    width: 100%;
+    background-color: $fondo-perla;
+    /* color de hover para lista de hobbys */
+    &:hover{
+        background-color: $fondo-amarillento;
+    }
+    /* color al apretar lista de hobbys  */
+    &:focus{
+        background-color:$fondo-amarillento;
+    }
+}
+.list-group-item.active{
+    background-color: $fondo-amarillento;
+    color:black
+}
+@if $estiloPorfolio == aniversario-1°{
+    .body-about{
+        background-color: #4F200D;                                    
+    }
+}
+@else{
+    .body-index{
+        background-color: $fondo-oscuro
+    }
+} 
+/*------------------------ FOOTER ABOUT  el mismo que galeria*/
+.footer-galeria {
+    grid-area: footer;
+}
+/* --------------------------Media Queries About----------------------- */

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario | Portfolio Díaz Abiel</title>
+    <meta name="description" content="Puedes contratar uno de mis servicios. Por medio de este breve formulario. ">
+    <meta name="keywords" content="Portfolio , Diseño Gráfico, Contratacion, Desarrollo Web, Web Developer, Arg, 2023">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- enlaces para estilos y favicon -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../img/Favicon-Prototipo.png" type="image/x-icon">
+</head>
+<body class="body-form">
+    <!-- HEADER -->
+    <header class="header-index">
+        <nav class="header__menu">
+            <!-- Logotipo con enlace a home  -->
+            <div class="header__divLogo">
+                <a href="../index.html"><img class="header__divLogo--margin" src="../img/Logo-inicio.png"
+                        alt="logo-inicio"></a>
+            </div>
+                    <!-- --------ANIVERSARIO 1° AÑO CODICIONAL ----------------- -->
+                    <!-- <img src="../img/1-año-aniversario.jpg.png" alt="1° aniversario"> -->
+                    <!-- ----------------------------- ----------------- -->
+            <!-- Seccion Menú navegable- despegable-resposive y enlaces a las páginas correspondientes -->
+            <section class="navbar navbar-expand-lg header__menu__sector">
+                <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./galeria.html">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./formulario.html">Formulario</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main class="main-form">
+        <!-- Mini formulario para contratar un trabajo  -->
+        <form action="">
+            <fieldset>
+                <!-- IMPUT PARA NOMBRE EMAIL Y EDAD -->
+                <!-- input name -->
+                <h1>Ingrese sus datos para contratar un servicio</h1>
+                <label id="name-label" for="name"><strong>Nombre</strong> <input id="name" type="text" name="name"
+                        required placeholder="Elige un nombre" /></label>
+                <!-- email colocar  -->
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"><strong>Email </strong></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        required placeholder="Ingresa un email">
+                <!-- Edad -->
+                <div class="mb-3">
+                    <label for="number" id="number-label"><strong>Edad (opcional)</strong>
+                        <input id="number" type="number" name="number" min="12" max="100" minlength="3"
+                            placeholder="Edad" /></label>
+                </div>
+                <!-- Selector de clases de servicios -->
+                <article class="titulo-01-serv">
+                    <p><strong>En que area de servicio quiere que trabajemos </strong></p>
+                </article>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>(elige una servicio)</option>
+                    <option value="1">Diseño Gráfico</option>
+                    <option value="2">Mantenimiento de PC</option>
+                    <option value="3">Edición Multimedia</option>
+                    <option value="4">Creación de pagina web</option>
+                </select>
+                <section>
+                    <!-- Seccion 2 parte de eleccion de temas -->
+                    <h3 class="opciones-titulo">Cuales de estos temas te gustaria que trabajemos</h3>
+                    <p> Puedes elegir (MAX-2) para que podamos trabajarlo desde, Diseño , PC o Edicion</p>
+                    <!-- Opciones con checkbox -->
+                    <!-- Opc1 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Idenitdad Coporativa</strong>
+                            <p>(Diseño de Marca / Aplicaciones de la marca / Logo / Rediseño de marca) </p>
+                        </label>
+                    </div>
+                    <!-- Opc2 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Merchandising</strong>
+                            <p>(Remeras / llaveros / gorras / calcos)</p>
+                        </label>
+                    </div>
+                    <!-- Opc3 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Packaging</strong>
+                            <p>(Diseño de envases desde Alta/Media/Baja complejidad / Etiquetas de Vino)</p>
+                        </label>
+                    </div>
+                    <!-- Opc4 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Señaletica</strong>
+                            <p> (Sistema Señaletico de Alta/Media/Baja complejidad)</p>
+                        </label>
+                    </div>
+                    <!-- Opc5 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Publicidad</strong>
+                            <p>(Afiches / Folletos / Diseño Stand / Ploteado)</p>
+                        </label>
+                    </div>
+                    <!-- Opc6 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Paginas Web</strong>
+                            <p>(Diseño y Maquetacion HTML Y CSS / Foromularios, Galeria)</p>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Edicion Audio y Video </strong>
+                            <p>(Edicion en Premier, PS, Audacity)</p>
+                        </label>
+                    </div>
+                    <!-- Opc8 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Mantenimiento PC</strong>
+                            <p>(Limpeza / Reparación / Seguridad)</p>
+                        </label>
+                    </div>
+                    <!-- Opc9 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <strong>Ensamblaeje de Hardwere</strong>
+                            <p>(Unir los componentes en la PC)</p>
+                        </label>
+                    </div>
+                    <!-- Comentario -->
+                    <article class="comentario">
+                        <h2>Escriba un comentario de que solicitud desea realizar </h2>
+                        <textarea id="comentario-1" name="comentario-1" cols="80" rows="100"
+                            placeholder="Escriba aqui... "></textarea></label>
+                    </article>
+                    <!-- Como conosiste mis servicios opciones de BS  -->
+                    <article class="titulo-01-serv">
+                        <h3>Si gusta, puede realizar su valoración. </h3>
+                        <p><strong>Como te enteraste mis servicios</strong></p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>(elige una motivo)</option>
+                            <option value="1">Internet</option>
+                            <option value="2">Contactos</option>
+                            <option value="3">Publicidad</option>
+                            <option value="4">Otros</option>
+                        </select>
+                    </article>
+                    <!--  Inmput con type radio de elección    -->
+                    <article class="titulo-01-serv">
+                        <p> <strong>¿Qué te parece la organización de mí página web? </strong></p>
+                    </article>
+                    <!--  input radio 1  Conforme-->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Conforme
+                        </label>
+                    </div>
+                    <!-- input radio 2 aceptable -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Aceptable
+                        </label>
+                    </div>
+                    <!-- input radio 3 falla -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Falla
+                        </label>
+                    </div>
+                    <input id="submit" type="submit" value="Enviar" />
+                </section>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="footer-galeria">
+        <!-- Footer fixed para que vuelvas a home si tener que ir hasta arriba -->
+        <a href="../index.html">
+            <h2>HOME</h2>
+        </a>
+        <a href="#top">
+            <h2>VOLVER ARRIBA</h2>
+        </a>
+    </footer>
+</body>
+
+</html>

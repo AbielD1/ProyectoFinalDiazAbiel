@@ -1,0 +1,36 @@
+@import 'base/variables';
+@import 'base/mapsEstilos';
+@import 'base/mixinBtnEnviar';
+@import 'base/generalFuentes';
+@import 'pagCompiladas/indexCSS';
+@import 'mQueriesMovil/indexQueries';
+@import 'pagCompiladas/galeriaCSS';
+@import 'mQueriesMovil/galeriaQueries';
+@import 'pagCompiladas/aboutCSS';
+@import 'mQueriesMovil/aboutQueries';
+@import 'pagCompiladas/contactoCSS';
+@import 'mQueriesMovil/contactoQueries';
+@import 'pagCompiladas/serviciosCSS';
+@import 'mQueriesMovil/serviciosQueries';
+@import 'pagCompiladas/formCSS';
+@import 'mQueriesMovil/formQueries';
+
+/* COSAS POR HACER  */
+// Quitar el codigo repetido del sass
+// Ampliar el contenido de mixin
+//  aplicar mas mapas al resto de paginas
+//  APLICAR la clase de SASS II al proyecto
+// APLICAR VARIABLES DE LAS FUENTES A MIS PAGINAS 
+// Aplicar la clase de SEO 
+// Ver buenas practicas vericar que este todo bien hecho
+// las img de las pestañaas individuales reducirlas a las 1080p 
+// Organizar mejor los condicionales bucles en parshal individuales 
+// cambiar la anchura de los elementos
+// usar la container row y col de BS 
+// VER EL TEMA DE LAS MEDIDAS DE INDEX 
+// VER LA ANIMACION DE LA PARTE DE ATRAS 
+//  VER el tema de la geleria que es mas chica
+// en conctactos se puede desplazar los contactos debajo de maps
+// cambiar todos los resposives con las nuevas adaptaciones 
+// agregar contenido al index
+// ver las correcciones de la 3° pre-entrega 

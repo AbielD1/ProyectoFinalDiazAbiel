@@ -1,0 +1,105 @@
+/* --------------------------Media Queries About----------------------- */
+@media (min-width:320px) and (max-width:480px){
+    /* Body Resposibe about */
+    .body-about{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "section"
+        "article" 
+        "footer";
+    /* header unico  */
+    }
+    .header__menu{
+        grid-area: header;
+    }
+    .header__divLogo{
+        grid-area: header;
+    }
+    .header__menu__sector div ul{
+        grid-area: section;
+    }
+    .main-about{
+        grid-area: main;
+        display: inline-block;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: 1fr;                         /* VER ACA */
+        grid-gap: 30px;
+    }
+    /* titulo acomodado */
+    .titulo-about{
+        grid-area: section;
+        width: 440px;                   
+        height: 50px;
+        margin: 20px;
+        /*Titulo de About texto*/
+        h1{
+            grid-area: main;
+            padding: 5px;
+            margin-left: 8px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    .img-y-descripcion {
+        grid-area: section ;
+        display: inline;
+    }
+    .img-y-descripcion img{
+        width: 440px;
+        height: 350px;
+        margin: 0 0 5px 20px;
+    }
+    .parrafo1{
+        width: 450px;
+        padding: 20px;
+        height: 320px;                 
+        font-size: 18px;
+        margin: 10px;
+    }
+    /* TEXTO PARRAFO 2 */
+    .info-s2{
+        margin: 10px 10px;
+        width: 450px;
+        font-size: 18px;
+    }
+    .auto-motivacion h2{
+        width: 100%;
+        margin: 0;
+    }
+    /* cartel de motivacion */
+    .act-hobbys {
+        display: inline-block;
+        margin: 10px;
+        img{
+            width: 450px;
+            margin: 0 10px 10px 0;
+        }
+    }
+    /* Acordion de bootstrap con obejetivos y mi personalidad */
+        .accordion{
+        margin: 10px 0;
+        width: 450px;
+    }
+    /* Lista de Hobbys */
+    .list-group{
+        display: flex;
+        justify-content: center;
+        margin-left: 25%;
+    }
+    .list-group-item{
+        display: flex;
+        justify-content: left;
+        color:#4C3D3D;
+        width: 250px;
+        /* color al apretar lista de hobbys  */
+        &:focus{
+            background-color:$fondo-amarillento;
+        }
+    }
+    .list-group-item.active{
+        background-color: $fondo-amarillento;
+        color:black
+    }
+}

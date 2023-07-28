@@ -1,0 +1,145 @@
+/* ---------------------------  CSS pages GALERIA -------------------- */
+/* BODY DE GALERIA */
+.body-galeria{
+    background-color: $fondo-oscuro;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "main main aside" 
+    "section section aside "
+    "footer footer footer";
+    font-family: "Roboto-Regular";
+}
+/* HEADER de Galeria */
+.header-index{
+    grid-area: header;
+}
+
+/* Main de galeria */
+.main-galeria{
+    grid-area: main;
+    display: flex;
+    justify-content:right;
+    margin: 30px;
+    /* Espesifidad main + section */
+    section{
+        grid-area: section;
+        display: grid;
+        grid-template-rows: repeat(1, 3fr);
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 30px;
+        justify-items: center;
+    }
+}
+/* Todos los protyectos img */
+/* Secciones de todas la galeria  */
+.section__todos__proyectos{
+    grid-area: section;
+    display: flex;
+    justify-content:right;
+    /* Efecto en la img en la galeria  */
+    .card-img-top{
+        width: 100%;
+        transition: all 300ms;
+        position: relative;
+        &:hover{
+            transform: scale(0.92);
+        }
+    }
+}
+.card{
+    width: 22rem;;
+    background-color: $fondo-amarillento;
+    transition: all 300ms;
+    &:hover{
+        background-color: $fondo-perla;
+    }
+}
+/* Boton de descarga pdf con distinto color  */
+.btn-primary{
+    background-color: $fondo-oscuro;
+    &:hover{
+        background-color: $fondo-dorado ;
+        color: white
+    }
+}
+/*--------------- ASIDE de Galeria -------------contenedor y  posicion  */
+.aside-galeria{
+    grid-area: aside;
+    display: block;
+    justify-content: right;
+    background-color: #C07F00;
+    margin: 30px ;
+    border-radius: 40px;
+    /* ASIDE de Galeria titulo */
+    h1{
+        grid-area: aside;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-family: "Roboto-Bold";
+        font-size: 35px;
+    }
+    /* Parrafo de titulo de los iframe */
+    p{
+        grid-area: aside;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 20px;
+        font-family: "Roboto-Bold";
+        text-align: center;
+    }
+}
+.article-galeria-aclaracion{
+    display: inline;
+    p{
+        background-color:$fondo-amarillento;
+    }
+    img{
+        margin-left: 20px;
+        transition: 1s;
+        &:hover{
+            transform: scale(0.95);
+        }  
+    }
+}
+/* iframe de los videos  */
+.videos-tp{
+    grid-area: aside;
+    text-align: center;
+    margin: 5px 20px;
+}
+@if $estiloPorfolio == aniversario-1°{
+    .body-galeria{
+        background-color: #4F200D;                                    
+    }
+}
+@else{
+    .body-index{
+        background-color: $fondo-oscuro
+    }
+}
+/* --------------------------FOOTER GALERIA usado en about y formulario----------------- */
+.footer-galeria {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $fondo-dorado;         
+    height: 50px;
+    a{
+        text-decoration: none;
+    }  
+    h2{
+        font-family: "Roboto-Bold";
+        color:$fondo-oscuro;
+        font-size: 35px;
+        &:hover{
+            color: white;
+            transition: 0.5s;
+        }  
+    }
+}
+/*---------------------------------------- Media Queris Galeria------------------- */
