@@ -7,7 +7,6 @@
     grid-template-areas: 
     "header header header"
     "main main aside" 
-    "section section aside "
     "footer footer footer";
     font-family: "Roboto-Regular";
 }
@@ -26,10 +25,13 @@
     section{
         grid-area: section;
         display: grid;
-        grid-template-rows: repeat(1, 3fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 2fr);
         grid-gap: 30px;
         justify-items: center;
+    }
+    .card{
+        width: auto;
     }
 }
 /* Todos los protyectos img */
@@ -49,7 +51,7 @@
     }
 }
 .card{
-    width: 22rem;;
+    width: 100%;
     background-color: $fondo-amarillento;
     transition: all 300ms;
     &:hover{
@@ -67,38 +69,41 @@
 /*--------------- ASIDE de Galeria -------------contenedor y  posicion  */
 .aside-galeria{
     grid-area: aside;
-    display: block;
-    justify-content: right;
     background-color: #C07F00;
-    margin: 30px ;
+    margin: 20px ;
     border-radius: 40px;
     /* ASIDE de Galeria titulo */
     h1{
         grid-area: aside;
         display: flex;
         justify-content: center;
-        padding: 10px;
         font-family: "Roboto-Bold";
-        font-size: 35px;
+        font-size: 20px;
+        padding: 10px;
     }
     /* Parrafo de titulo de los iframe */
+    .p-1{
+        background-color:$fondo-dorado;
+        font-size: 15px;
+        margin: 10px;
+    }
     p{
+        background-color:$fondo-amarillento;
         grid-area: aside;
-        display: flex;
-        justify-content: center;
         padding: 10px;
-        font-size: 20px;
+        font-size: 16px;
         font-family: "Roboto-Bold";
         text-align: center;
     }
 }
 .article-galeria-aclaracion{
-    display: inline;
     p{
-        background-color:$fondo-amarillento;
+        width: 100%;
+        font-size: 16px;
+        padding: 20px;
     }
     img{
-        margin-left: 20px;
+        width: 400px;
         transition: 1s;
         &:hover{
             transform: scale(0.95);
@@ -109,7 +114,7 @@
 .videos-tp{
     grid-area: aside;
     text-align: center;
-    margin: 5px 20px;
+
 }
 @if $estiloPorfolio == aniversario-1°{
     .body-galeria{

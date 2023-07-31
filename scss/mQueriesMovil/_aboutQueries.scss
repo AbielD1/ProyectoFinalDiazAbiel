@@ -2,13 +2,12 @@
 @media (min-width:320px) and (max-width:480px){
     /* Body Resposibe about */
     .body-about{
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-        "header"
-        "main"
-        "section"
-        "article" 
-        "footer";
+        "header header"
+        "main main"
+        "footer footer";
     /* header unico  */
     }
     .header__menu{
@@ -18,88 +17,77 @@
         grid-area: header;
     }
     .header__menu__sector div ul{
-        grid-area: section;
+        grid-area: main;
     }
+    /* Main resposive about */
     .main-about{
         grid-area: main;
-        display: inline-block;
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: 1fr;                         /* VER ACA */
-        grid-gap: 30px;
     }
     /* titulo acomodado */
     .titulo-about{
-        grid-area: section;
-        width: 440px;                   
-        height: 50px;
-        margin: 20px;
+        grid-area: main;
+        display: flex;
+        align-items: end;
+        margin: 10px 0;
         /*Titulo de About texto*/
         h1{
             grid-area: main;
-            padding: 5px;
-            margin-left: 8px;
-            font-size: 18px;
-            font-weight: 700;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
         }
     }
     .img-y-descripcion {
-        grid-area: section ;
-        display: inline;
+        grid-area: main;
+        display: inline-block;
+        img{
+            width: 100%;
+        }
     }
-    .img-y-descripcion img{
-        width: 440px;
-        height: 350px;
-        margin: 0 0 5px 20px;
+    .biografia-1{
+        width: 100%;
     }
     .parrafo1{
-        width: 450px;
-        padding: 20px;
-        height: 320px;                 
+        padding: 20px;              
         font-size: 18px;
         margin: 10px;
     }
-    /* TEXTO PARRAFO 2 */
-    .info-s2{
-        margin: 10px 10px;
-        width: 450px;
-        font-size: 18px;
+    .biografia-2{
+        width: 100%;
     }
+    /* TEXTO PARRAFO 2 */
+    .parrafo2{
+        font-size: 18px;
+        margin: 10px;
+        line-height: 1.5;
+    }
+    /* Seccion 2 de desarrollo personal  */
     .auto-motivacion h2{
         width: 100%;
-        margin: 0;
+        margin: 15px 0;
     }
     /* cartel de motivacion */
     .act-hobbys {
         display: inline-block;
+        padding: 0px;
         margin: 10px;
         img{
-            width: 450px;
-            margin: 0 10px 10px 0;
+            width: 100%;
         }
     }
     /* Acordion de bootstrap con obejetivos y mi personalidad */
         .accordion{
         margin: 10px 0;
-        width: 450px;
+        width: 100%;
     }
     /* Lista de Hobbys */
-    .list-group{
-        display: flex;
-        justify-content: center;
-        margin-left: 25%;
-    }
     .list-group-item{
         display: flex;
-        justify-content: left;
-        color:#4C3D3D;
-        width: 250px;
+        justify-content: center;
+        width: 100%;
         /* color al apretar lista de hobbys  */
         &:focus{
             background-color:$fondo-amarillento;
         }
-    }
-    .list-group-item.active{
-        background-color: $fondo-amarillento;
-        color:black
     }
 }

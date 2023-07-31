@@ -1,6 +1,7 @@
 /*---------------------------------------- Media Queris Galeria------------------- */
 @media (min-width:320px) and (max-width:480px){
     .body-galeria{
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "header"
@@ -44,6 +45,9 @@
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 30px;
         }
+        .card{
+            width: 100% ;
+        }
     }
     /* todas las card de  bootstrap */
     .section__todos__proyectos{
@@ -69,24 +73,29 @@
     /* ASIDE-GALERIA  */
     .aside-galeria{
         grid-area: aside;
-        margin-left: 20px;
-        width: 430px;
+        margin: 20px 0px;
+        width: 100%;
         /* ASIDE-Galeria h3 */
         h1{
             padding: 5px;
             font-size: 20px;
+        }
+        .p-1{
+            padding: 20px;
         }
         /* ASIDE-Galeria parrafo */
         p{
             display: block;
             padding: 2px;
             font-size: 15px;
+            padding: 10px;
         }
     }
     .article-galeria-aclaracion{
         display: inline;
         p{
             background-color:$fondo-amarillento;
+            padding: 10px;
         }
         img{
             width: 360px;

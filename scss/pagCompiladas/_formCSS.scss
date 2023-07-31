@@ -6,8 +6,10 @@
     grid-template-areas:
     "header header "
     "main main"
-    "form form"
     "footer footer";
+    p{
+        font-size: 18px;    
+    }
 }
 .header-form{
     grid-area: header;
@@ -19,8 +21,11 @@
     margin: 20px;
     h1{
         grid-area: main;
-        background-color:$fondo-amarillento;
+        font-size: 25px;
         text-align: center;
+        color:$fondo-oscuro;
+        padding: 10px;
+        background-color: $fondo-amarillento;
     }
 }
 /* condicional de modo-aniversario */
@@ -36,33 +41,32 @@
 } 
  /* Separacion de los elementos del formulario + tipografia */
 label{
-    display: block;             
-    font-family: "Roboto-Regular";
-    font-size: 18px;
+    width: 100%;           
+    font-size: 20px;
 }
 /* Iput textarea innline con fuente */
-input, textarea,.inline{
+input{
     display:block;
-    font-family: "Roboto-Regular";
-    height: 30px;                    
-}
-/* Anchura de imput y select */
-input, select{
+    margin: 10px 0;
+    border: white;                    
+    font-size: 16px;
+    padding: 10px;                              
     width: 100%;
-    height: 25px;                                
+    height: 50%;
 }
 /* Separacion de los selectores de opciones */
 .form-select{
     padding: 0;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 /* dimenciones del formulario */
-form{
+.contratacion-form{
     grid-area: form;
     max-width: 700px;
     min-width: 300px;
     width: 80vw;            
-    padding:8px;
+    padding:10px;
+    background-color: $fondo-perla
 }
 /* Boton enviar  personalizado*/
 input[id="submit"]{
@@ -72,13 +76,12 @@ input[id="submit"]{
     width: 400px;
     margin-top: 20px;
     margin-bottom: 20px;        
-    height: 40px;
     background: $fondo-dorado;
     border: $fondo-oscuro 2px solid;
     border-radius: 10px;
     color:black;
     &:hover{
-        background: radial-gradient(circle at center, $fondo-dorado, $fondo-amarillento);
+        background: radial-gradient(circle at center, $fondo-amarillento, $fondo-dorado);
         box-shadow: 0 0 5px $fondo-dorado,
                     0 0 25px $fondo-dorado,
                     0 0 50px $fondo-dorado,
@@ -90,46 +93,49 @@ input[id="submit"]{
     border-color: $fondo-oscuro;
 }
 /* fondo de los titulos del form */
-.opciones-titulo{
-    background-color: $fondo-dorado;
-    font-size: 25px;
-    padding:5px;
-    text-align: center;
-    font-weight: 700;
-}
-/* fonndo y margen de formulario  */
-fieldset {
-    background-color:$fondo-perla;
-    padding: 10px;           
-}
-p[type="text"]{
-    text-align:center;
-    margin-left:10px ;         
-}
-/* FOOTER FORM----el mismo que galeria----- */
-.footer-galeria{
-    grid-area: footer;
-}
-#dropdown{
-    margin: 10px 0;
-}
-.comentario h2{ 
-    text-align:center;
-    background-color: $fondo-dorado; 
-    font-family: "Roboto-Bold";
-    font-size: 25px;
-    padding: 5px;
-    #comentario-1{
-        height: 100px;
-        margin-bottom: 10px;
+.opciones-servicios{
+    h3{
+        background-color: $fondo-amarillento;
+        font-size: 25px;
+        padding: 10px;
+        text-align: center;
+    }
+    .form-check-label{
+        margin-left: 10px;
     }
 }
-.titulo-01-serv h3{
-    background-color: $fondo-dorado;
-    font-size: 25px;
-    text-align: center;
-    font-weight: 700;
-    padding: 3px;
-    margin-top: 10px;
+.form-select{
+    padding: 5px;
+}
+/* fonndo y margen de formulario  */
+
+p[type="text"]{
+    text-align:center;
+    margin-left:10px ;     
+}
+.msj-proyecto{
+    h2{
+        text-align:center;
+        background-color: $fondo-amarillento;
+        font-family: "Roboto-Bold";
+        font-size: 25px;
+        padding: 10px;
+    }
+    #comentario-1{
+        padding: 10px;
+        width: 100%;
+    }
+}  
+.titulo-01-serv{
+    h3{
+        font-size: 25px;
+        text-align: center;
+        padding: 5px;
+        margin-top: 10px;
+    }
+}
+/* --------------FOOTER FORM----el mismo que galeria----- */
+.footer-galeria{
+    grid-area: footer;
 }
 /*-------------------- Media Queries Formulario ---------------------- */

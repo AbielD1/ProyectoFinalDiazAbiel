@@ -61,11 +61,11 @@
     </header>
     <main class="main-form">
         <!-- Mini formulario para contratar un trabajo  -->
-        <form action="">
+        <form action="" class="contratacion-form">
             <fieldset>
+                <h1><strong>INGRESE SUS DATOS PARA CONTRATAR UN SERVICIO</strong></h1>
                 <!-- IMPUT PARA NOMBRE EMAIL Y EDAD -->
                 <!-- input name -->
-                <h1>Ingrese sus datos para contratar un servicio</h1>
                 <label id="name-label" for="name"><strong>Nombre</strong> <input id="name" type="text" name="name"
                         required placeholder="Elige un nombre" /></label>
                 <!-- email colocar  -->
@@ -90,9 +90,9 @@
                     <option value="3">Edición Multimedia</option>
                     <option value="4">Creación de pagina web</option>
                 </select>
-                <section>
+                <section class="opciones-servicios">
                     <!-- Seccion 2 parte de eleccion de temas -->
-                    <h3 class="opciones-titulo">Cuales de estos temas te gustaria que trabajemos</h3>
+                    <h3><strong>Cuales de estos temas te gustaria que trabajemos</strong></h3>
                     <p> Puedes elegir (MAX-2) para que podamos trabajarlo desde, Diseño , PC o Edicion</p>
                     <!-- Opciones con checkbox -->
                     <!-- Opc1 -->
@@ -167,14 +167,14 @@
                         </label>
                     </div>
                     <!-- Comentario -->
-                    <article class="comentario">
-                        <h2>Escriba un comentario de que solicitud desea realizar </h2>
-                        <textarea id="comentario-1" name="comentario-1" cols="80" rows="100"
+                    <article class="msj-proyecto">
+                        <h2>Escriba un mensaje de que solicitud desea realizar </h2>
+                        <textarea id="comentario-1" name="comentario-1" cols="80" rows="5"
                             placeholder="Escriba aqui... "></textarea></label>
                     </article>
                     <!-- Como conosiste mis servicios opciones de BS  -->
                     <article class="titulo-01-serv">
-                        <h3>Si gusta, puede realizar su valoración. </h3>
+                        <h3> <strong>Si gusta, puede realizar su valoración.</strong> </h3>
                         <p><strong>Como te enteraste mis servicios</strong></p>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>(elige una motivo)</option>

@@ -4,10 +4,11 @@
     background-color: $fondo-oscuro;
     font-family: "Roboto-Regular";
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "header header header"
-    "main main section"
-    "footer footer footer";
+    "header header"
+    "main main"
+    "footer footer";
 }
 /* Mismo header del inicio para todas las paginas POR AHORA.. */
 .header-index{
@@ -19,85 +20,70 @@
 }
 /* contenedor Titulo de About  */
 .titulo-about{
-    grid-area: section;
-    background-color: $fondo-dorado;
-    width: 700px;                   
-    height: 70px;
-    font-size: 1.5rem;
+    grid-area: main;
     display: flex;
-    justify-self: center;
+    justify-content:  center;
     align-items: center;
-    margin: 20px 35%;
+    margin: 30px 0;
+    background-color: $fondo-dorado;
     /*Titulo de About texto*/
     h1{
         grid-area: main;
         padding: 5px;
-        font-size: 30px;
     }
 }
 /* Img y biografia 1 de about me display flex*/
 .img-y-descripcion {
-    grid-area: section ;
+    grid-area: main;
     display: flex;
     justify-content: space-evenly;
-    align-content: center;
+    img{
+        width: 30%;
+    }
 }
 /* contenedor Parrafo 1 de biografia */
 .biografia-1{
-    grid-area: section;
-    display: block
+    grid-area: main;
+    flex-wrap: wrap;
+    width: 50%;
 }
 /* Parr 1 de biografia */
 .parrafo1{
-    grid-area: section; 
-    background-color:$fondo-perla;
-    width: 700px;
+    grid-area: main;
+    background-color: $fondo-perla;
+    border-radius: 20px;
     padding: 20px;
-    height: 250px;                 
-    padding: 10px;
     line-height: 1.5;
     font-size: 20px;
     font-family: "Roboto-Regular";
-    margin-bottom: 20px;
 }
 
 /* CONTENEDOR TEXTO PARRAFO 2 */
 .biografia-2{
-    grid-area: section;
+    grid-area: main;
     display: flex;
-    justify-content: left;
+
 }
 /* TEXTO PARRAFO 2 */
-.info-s2{
-    grid-area: section ;
-    display: inline;
+.parrafo2{
+    grid-area: main ;
     margin: 30px;
     font-size: 20px;
+    border-radius: 20px;
     background-color:$fondo-perla;
-    padding: 15px;
-    line-height: 1.3;
-    font-family: "Roboto-Regular";
+    padding: 20px;
+    line-height: 1.5;
+    width: 100%;
 }
 /* titulo seccion actividades */
-.auto-motivacion h2{
+.auto-motivacion{
     display: flex;
     justify-content: center;
-    background: $fondo-dorado;
-    width: 20%;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-}
-/* Contenedor de hobbys */
-.article-about{
-    grid-area: section;
-    /* Titulo de hobbys */
-    h3{
-        color:#4C3D3D;
-        font-weight: 800;
-        background-color: $fondo-amarillento;
+    h2{
+        background: $fondo-dorado;
+        width: 100%;
         text-align: center;
-        padding: 10px;
+        font-size: 40px;
     }
 }
 /* Actividades Favoritas */
@@ -105,15 +91,14 @@
     grid-area: section;
     display: flex;
     justify-content: space-around;
-    margin: 20px;
-}
-/* Acordion de bootstrap con obejetivos y mi personalidad */
-.accordion{
-    margin: 0 20px 20px 10px;
+    align-items: start;
+    margin: 30px;
+    padding: 20px;
 }
 .accordion-button{
     background-color: $fondo-dorado;
     border: $fondo-dorado;
+    font-size: 20px;
     &:not(.collapsed){
         background-color: $fondo-amarillento;
     }
@@ -124,12 +109,9 @@
 /* Lista de Hobbys */
 .list-group-item{
     display: flex;
-    color:#4C3D3D;
-    background-color: $fondo-dorado;
     border: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
-    width: 100%;
     background-color: $fondo-perla;
     /* color de hover para lista de hobbys */
     &:hover{

@@ -280,7 +280,7 @@
 
 /* ------------------------------Media Queris INDEX -------------------------------*/
 /* ------------------------------Media Queris INDEX -------------------------------*/
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .body-index {
     display: grid;
     grid-template-columns: 1fr;
@@ -390,7 +390,7 @@
     margin-left: 200px;
   }
   .articulo__index__serv img {
-    margin-left: 200px;
+    margin-left: 160px;
   }
   .articulo__index__serv p {
     grid-area: footer;
@@ -407,7 +407,7 @@
   background-color: #4C3D3D;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header header header" "main main aside" "section section aside " "footer footer footer";
+  grid-template-areas: "header header header" "main main aside" "footer footer footer";
   font-family: "Roboto-Regular";
 }
 
@@ -427,10 +427,13 @@
 .main-galeria section {
   grid-area: section;
   display: grid;
-  grid-template-rows: repeat(1, 3fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 2fr);
   grid-gap: 30px;
   justify-items: center;
+}
+.main-galeria .card {
+  width: auto;
 }
 
 /* Todos los protyectos img */
@@ -451,7 +454,7 @@
 }
 
 .card {
-  width: 22rem;
+  width: 100%;
   background-color: #FFD95A;
   transition: all 300ms;
 }
@@ -471,10 +474,8 @@
 /*--------------- ASIDE de Galeria -------------contenedor y  posicion  */
 .aside-galeria {
   grid-area: aside;
-  display: block;
-  justify-content: right;
   background-color: #C07F00;
-  margin: 30px;
+  margin: 20px;
   border-radius: 40px;
   /* ASIDE de Galeria titulo */
   /* Parrafo de titulo de los iframe */
@@ -483,28 +484,31 @@
   grid-area: aside;
   display: flex;
   justify-content: center;
-  padding: 10px;
   font-family: "Roboto-Bold";
-  font-size: 35px;
+  font-size: 20px;
+  padding: 10px;
+}
+.aside-galeria .p-1 {
+  background-color: #C07F00;
+  font-size: 15px;
+  margin: 10px;
 }
 .aside-galeria p {
+  background-color: #FFD95A;
   grid-area: aside;
-  display: flex;
-  justify-content: center;
   padding: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Roboto-Bold";
   text-align: center;
 }
 
-.article-galeria-aclaracion {
-  display: inline;
-}
 .article-galeria-aclaracion p {
-  background-color: #FFD95A;
+  width: 100%;
+  font-size: 16px;
+  padding: 20px;
 }
 .article-galeria-aclaracion img {
-  margin-left: 20px;
+  width: 400px;
   transition: 1s;
 }
 .article-galeria-aclaracion img:hover {
@@ -515,7 +519,6 @@
 .videos-tp {
   grid-area: aside;
   text-align: center;
-  margin: 5px 20px;
 }
 
 .body-index {
@@ -548,6 +551,7 @@
 /*---------------------------------------- Media Queris Galeria------------------- */
 @media (min-width: 320px) and (max-width: 480px) {
   .body-galeria {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "section" "aside" "footer";
   }
@@ -587,6 +591,9 @@
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
   }
+  .main-galeria .card {
+    width: 100%;
+  }
   /* todas las card de  bootstrap */
   .section__todos__proyectos {
     grid-area: main;
@@ -611,8 +618,8 @@
   /* ASIDE-GALERIA  */
   .aside-galeria {
     grid-area: aside;
-    margin-left: 20px;
-    width: 430px;
+    margin: 20px 0px;
+    width: 100%;
     /* ASIDE-Galeria h3 */
     /* ASIDE-Galeria parrafo */
   }
@@ -620,16 +627,21 @@
     padding: 5px;
     font-size: 20px;
   }
+  .aside-galeria .p-1 {
+    padding: 20px;
+  }
   .aside-galeria p {
     display: block;
     padding: 2px;
     font-size: 15px;
+    padding: 10px;
   }
   .article-galeria-aclaracion {
     display: inline;
   }
   .article-galeria-aclaracion p {
     background-color: #FFD95A;
+    padding: 10px;
   }
   .article-galeria-aclaracion img {
     width: 360px;
@@ -664,7 +676,8 @@
   background-color: #4C3D3D;
   font-family: "Roboto-Regular";
   display: grid;
-  grid-template-areas: "header header header" "main main section" "footer footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "header header" "main main" "footer footer";
 }
 
 /* Mismo header del inicio para todas las paginas POR AHORA.. */
@@ -679,92 +692,75 @@
 
 /* contenedor Titulo de About  */
 .titulo-about {
-  grid-area: section;
-  background-color: #C07F00;
-  width: 700px;
-  height: 70px;
-  font-size: 1.5rem;
+  grid-area: main;
   display: flex;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
-  margin: 20px 35%;
+  margin: 30px 0;
+  background-color: #C07F00;
   /*Titulo de About texto*/
 }
 .titulo-about h1 {
   grid-area: main;
   padding: 5px;
-  font-size: 30px;
 }
 
 /* Img y biografia 1 de about me display flex*/
 .img-y-descripcion {
-  grid-area: section;
+  grid-area: main;
   display: flex;
   justify-content: space-evenly;
-  align-content: center;
+}
+.img-y-descripcion img {
+  width: 30%;
 }
 
 /* contenedor Parrafo 1 de biografia */
 .biografia-1 {
-  grid-area: section;
-  display: block;
+  grid-area: main;
+  flex-wrap: wrap;
+  width: 50%;
 }
 
 /* Parr 1 de biografia */
 .parrafo1 {
-  grid-area: section;
+  grid-area: main;
   background-color: #FFF7D4;
-  width: 700px;
+  border-radius: 20px;
   padding: 20px;
-  height: 250px;
-  padding: 10px;
   line-height: 1.5;
   font-size: 20px;
   font-family: "Roboto-Regular";
-  margin-bottom: 20px;
 }
 
 /* CONTENEDOR TEXTO PARRAFO 2 */
 .biografia-2 {
-  grid-area: section;
+  grid-area: main;
   display: flex;
-  justify-content: left;
 }
 
 /* TEXTO PARRAFO 2 */
-.info-s2 {
-  grid-area: section;
-  display: inline;
+.parrafo2 {
+  grid-area: main;
   margin: 30px;
   font-size: 20px;
+  border-radius: 20px;
   background-color: #FFF7D4;
-  padding: 15px;
-  line-height: 1.3;
-  font-family: "Roboto-Regular";
+  padding: 20px;
+  line-height: 1.5;
+  width: 100%;
 }
 
 /* titulo seccion actividades */
-.auto-motivacion h2 {
+.auto-motivacion {
   display: flex;
   justify-content: center;
+}
+.auto-motivacion h2 {
   background: #C07F00;
-  width: 20%;
+  width: 100%;
   text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-/* Contenedor de hobbys */
-.article-about {
-  grid-area: section;
-  /* Titulo de hobbys */
-}
-.article-about h3 {
-  color: #4C3D3D;
-  font-weight: 800;
-  background-color: #FFD95A;
-  text-align: center;
-  padding: 10px;
+  font-size: 40px;
 }
 
 /* Actividades Favoritas */
@@ -772,17 +768,15 @@
   grid-area: section;
   display: flex;
   justify-content: space-around;
-  margin: 20px;
-}
-
-/* Acordion de bootstrap con obejetivos y mi personalidad */
-.accordion {
-  margin: 0 20px 20px 10px;
+  align-items: start;
+  margin: 30px;
+  padding: 20px;
 }
 
 .accordion-button {
   background-color: #C07F00;
   border: #C07F00;
+  font-size: 20px;
 }
 .accordion-button:not(.collapsed) {
   background-color: #FFD95A;
@@ -795,12 +789,9 @@
 /* Lista de Hobbys */
 .list-group-item {
   display: flex;
-  color: #4C3D3D;
-  background-color: #C07F00;
   border: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
-  width: 100%;
   background-color: #FFF7D4;
   /* color de hover para lista de hobbys */
   /* color al apretar lista de hobbys  */
@@ -831,8 +822,9 @@
 @media (min-width: 320px) and (max-width: 480px) {
   /* Body Resposibe about */
   .body-about {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "main" "section" "article" "footer";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header" "main main" "footer footer";
     /* header unico  */
   }
   .header__menu {
@@ -842,89 +834,78 @@
     grid-area: header;
   }
   .header__menu__sector div ul {
-    grid-area: section;
+    grid-area: main;
   }
+  /* Main resposive about */
   .main-about {
     grid-area: main;
-    display: inline-block;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: 1fr; /* VER ACA */
-    grid-gap: 30px;
   }
   /* titulo acomodado */
   .titulo-about {
-    grid-area: section;
-    width: 440px;
-    height: 50px;
-    margin: 20px;
+    grid-area: main;
+    display: flex;
+    align-items: end;
+    margin: 10px 0;
     /*Titulo de About texto*/
   }
   .titulo-about h1 {
     grid-area: main;
-    padding: 5px;
-    margin-left: 8px;
-    font-size: 18px;
-    font-weight: 700;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
   }
   .img-y-descripcion {
-    grid-area: section;
-    display: inline;
+    grid-area: main;
+    display: inline-block;
   }
   .img-y-descripcion img {
-    width: 440px;
-    height: 350px;
-    margin: 0 0 5px 20px;
+    width: 100%;
+  }
+  .biografia-1 {
+    width: 100%;
   }
   .parrafo1 {
-    width: 450px;
     padding: 20px;
-    height: 320px;
     font-size: 18px;
     margin: 10px;
   }
-  /* TEXTO PARRAFO 2 */
-  .info-s2 {
-    margin: 10px 10px;
-    width: 450px;
-    font-size: 18px;
+  .biografia-2 {
+    width: 100%;
   }
+  /* TEXTO PARRAFO 2 */
+  .parrafo2 {
+    font-size: 18px;
+    margin: 10px;
+    line-height: 1.5;
+  }
+  /* Seccion 2 de desarrollo personal  */
   .auto-motivacion h2 {
     width: 100%;
-    margin: 0;
+    margin: 15px 0;
   }
   /* cartel de motivacion */
   .act-hobbys {
     display: inline-block;
+    padding: 0px;
     margin: 10px;
   }
   .act-hobbys img {
-    width: 450px;
-    margin: 0 10px 10px 0;
+    width: 100%;
   }
   /* Acordion de bootstrap con obejetivos y mi personalidad */
   .accordion {
     margin: 10px 0;
-    width: 450px;
+    width: 100%;
   }
   /* Lista de Hobbys */
-  .list-group {
-    display: flex;
-    justify-content: center;
-    margin-left: 25%;
-  }
   .list-group-item {
     display: flex;
-    justify-content: left;
-    color: #4C3D3D;
-    width: 250px;
+    justify-content: center;
+    width: 100%;
     /* color al apretar lista de hobbys  */
   }
   .list-group-item:focus {
     background-color: #FFD95A;
-  }
-  .list-group-item.active {
-    background-color: #FFD95A;
-    color: black;
   }
 }
 /* ---------------------------  CSS pages contacto -------------------- */
@@ -934,7 +915,7 @@
   font-family: "Roboto-Regular";
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header header header" "section section section" "article article article" "footer footer footer";
+  grid-template-areas: "header header header" "section section section" "footer footer footer";
 }
 
 /* HEADER-CONTACTO */
@@ -947,56 +928,51 @@
   grid-area: section;
   background-image: url(../img/fondo-contacto-img.jpg);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .info-articulo {
-  grid-area: main;
+  grid-area: section;
+  justify-content: center;
   /* contenedor contacto */
   /* Lista de contenido asociado */
-  /* frase de que puedo realizar */
 }
 .info-articulo h1 {
   background-color: #FFD95A;
   text-align: center;
   font-size: 30px;
-  height: 40px;
-  width: 160px;
   margin: 30px;
   font-family: "Roboto-Bold";
+  width: 30%;
 }
 .info-articulo p {
+  width: 40%;
   grid-area: section;
   background-color: #FFF7D4;
-  width: 360px;
   padding: 15px;
-  margin: 30px;
+  margin: 20px;
 }
 .info-articulo .lista-asociados {
   grid-area: section;
   list-style: none;
   padding: 10px;
-  grid-area: section;
   background-color: #FFF7D4;
-  width: 260px;
-  height: 200px;
-  margin-left: 30px;
+  width: 20%;
   padding-left: 20px;
+  margin: 20px;
 }
-.info-articulo .frase-epica {
-  font-style: italic;
-  text-align: center;
+.info-articulo .redes-y-cometario {
+  display: flex;
+  justify-content: space-between;
 }
 .info-articulo .section__icon__apps {
-  grid-area: main;
-  text-align: left;
-  margin-left: 30px;
+  grid-area: section;
+  justify-content: left;
   /* Separacion de iconos de redes y contactos */
 }
 .info-articulo .section__icon__apps a img {
-  width: 65px;
-  padding: 5px;
-  margin: 2px;
+  padding: 10px;
+  width: 100%;
 }
 .info-articulo .section__icon__apps button {
   border-radius: 20px;
@@ -1005,6 +981,28 @@
 }
 .info-articulo .section__icon__apps button:hover {
   transform: scale(0.85);
+}
+.info-articulo .h2-otros-proyectos-contacto {
+  width: 30%;
+  background-color: #FFD95A;
+  text-align: center;
+}
+.info-articulo .otro-proyecto {
+  margin: 20px;
+  display: flex;
+}
+.info-articulo .otro-proyecto img {
+  width: 200px;
+}
+.info-articulo .otro-proyecto p {
+  height: 100%;
+}
+.info-articulo .otro-proyecto p a {
+  color: #C07F00;
+  text-decoration: none;
+}
+.info-articulo .otro-proyecto p a:hover {
+  color: #4C3D3D;
 }
 .info-articulo #whatApp {
   background-color: #25D366;
@@ -1018,51 +1016,54 @@
 .info-articulo #instagram {
   background-color: #c72525;
 }
-.info-articulo .form-contacto {
+
+/* Mapa de ubicacion */
+.map {
+  grid-area: section;
+  text-align: center;
+  /* Mapa de ubicacion parrafo */
+}
+.map iframe {
+  width: 80%;
+}
+.map p {
+  background-color: #FFD95A;
+  text-align: center;
+  font-size: 23px;
+  margin: 30px 0 10px;
+}
+.map .form-contacto {
+  grid-area: main;
   /* comentario de tu  interez */
 }
-.info-articulo .form-contacto h2 {
+.map .form-contacto h2 {
   background-color: #FFD95A;
   font-size: 20px;
-  height: 40px;
-  width: 390px;
-  margin: 15px 30px;
+  text-align: center;
   padding: 5px;
 }
-.info-articulo .form-contacto #cometario {
-  margin: 20px 30px;
-  height: 100px;
+.map .form-contacto .cometario {
+  height: 40%;
+  width: 100%;
   border: #FFD95A solid 5px;
 }
-.info-articulo .form-contacto #enviar-contacto {
+.map .form-contacto .enviar-contacto {
   font-weight: 700;
   text-transform: uppercase;
   transition: 1s;
   cursor: pointer;
   letter-spacing: 0.3em;
   height: 50px;
-  width: 250px;
-  margin: 0 0 15px 150px;
+  width: 70%;
   background-color: #FFF7D4;
+  margin-left: 15%;
   border-radius: 10px;
   color: black;
   font-size: 16px;
 }
-.info-articulo .form-contacto #enviar-contacto:hover {
+.map .form-contacto .enviar-contacto:hover {
   background: radial-gradient(circle at center, #C07F00, #FFD95A);
   box-shadow: 0 0 5px #FFD95A, 0 0 25px #FFD95A, 0 0 50px #FFD95A, 0 0 100px #FFD95A;
-}
-
-/* Mapa de ubicacion */
-.map {
-  grid-area: article;
-  /* Mapa de ubicacion parrafo */
-}
-.map p {
-  background-color: #FFD95A;
-  text-align: center;
-  font-size: 20px;
-  height: 30px;
 }
 
 /* --------------------------FOOTER contato usado en pages  contacto y servicios----------------- */
@@ -1093,7 +1094,7 @@
   /* Body Resposibe about */
   .body-about {
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "main" "section" "article" "footer";
+    grid-template-areas: "header" "main" "footer";
     /* header unico  */
   }
   .header-index {
@@ -1116,18 +1117,17 @@
     margin: 20px 0;
   }
   .info-articulo p {
+    width: 80%;
     grid-area: section;
     background-color: #FFF7D4;
-    padding: 5px;
-    margin: 10px;
+    padding: 15px;
     font-size: 15px;
   }
   .info-articulo .lista-asociados {
-    width: 190px;
+    width: 50%;
     height: 150px;
     padding: 15px;
     font-size: 14px;
-    margin-left: 12px;
   }
   .info-articulo .frase-epica {
     font-size: 20px;
@@ -1144,46 +1144,65 @@
     width: 50px;
     margin: 10px;
   }
-  .info-articulo .form-contacto {
+  .info-articulo .h2-otros-proyectos-contacto {
+    width: 100%;
+    background-color: #FFD95A;
+    text-align: center;
+  }
+  .info-articulo .otro-proyecto {
+    margin: 20px;
+    display: flex;
+  }
+  .info-articulo .otro-proyecto img {
+    width: 130px;
+  }
+  .info-articulo .otro-proyecto p a {
+    color: #C07F00;
+    text-decoration: none;
+  }
+  .info-articulo .otro-proyecto p a:hover {
+    color: #4C3D3D;
+  }
+  .info-articulo .map {
+    grid-area: section;
+    /* Mapa de ubicacion parrafo */
+  }
+  .info-articulo .map iframe {
+    width: 120%;
+  }
+  .info-articulo .map p {
+    background-color: #FFD95A;
+    text-align: center;
+    font-size: 20px;
+    height: 30px;
+    width: 100%;
+  }
+  .info-articulo .map .form-contacto {
+    grid-area: main;
+    margin: 0;
     /* comentario de tu  interez */
   }
-  .info-articulo .form-contacto h2 {
-    height: 40px;
-    width: 440px;
-    margin: 15px 10px;
+  .info-articulo .map .form-contacto h2 {
+    height: 0px;
+    width: 100%;
+    padding: 0;
   }
-  .info-articulo .form-contacto #cometario {
-    width: 440px;
+  .info-articulo .map .form-contacto .cometario {
+    width: 100%;
     margin: 10px;
   }
-  .info-articulo .form-contacto #enviar-contacto {
+  .info-articulo .map .form-contacto .enviar-contacto {
     height: 50px;
-    width: 350px;
-    margin: 20px 0 5px 50px;
+    width: 100%;
     border-radius: 10px;
+    padding: 100px;
+    margin-left: 10%;
   }
-  .info-articulo .form-contacto #enviar-contacto:active {
+  .info-articulo .map .form-contacto .enviar-contacto:active {
     background: radial-gradient(circle at center, #C07F00, #FFD95A);
   }
 }
-.map {
-  grid-area: article;
-  margin: 10px 0;
-  /* Mapa de ubicacion parrafo */
-}
-.map iframe {
-  width: 450px;
-  margin-left: 15px;
-}
-.map p {
-  background-color: #FFD95A;
-  text-align: center;
-  font-size: 20px;
-  height: 30px;
-  width: 100%;
-}
-
-/* footer galeria resposive */
+/* ----------------footer galeria resposive -------------------*/
 .footer-contacto {
   grid-area: footer;
   display: flex;
@@ -1200,8 +1219,8 @@
   background-color: #4C3D3D;
   font-family: "Roboto-Regular";
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-areas: "header header" "main main" "section section" "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "header header" "main main" "footer footer";
 }
 
 /* header index el mismo en todos POR AHORA... */
@@ -1221,39 +1240,31 @@
 
 /* tarjetas de servicios */
 .card-servicios {
-  grid-area: section;
-  margin: 30px;
-}
-.card-servicios .mb-3 {
-  width: 800px;
+  grid-area: main;
+  margin: 20px;
 }
 
-/* img de las targetas */
 .servicio-img {
-  grid-area: section;
-  margin-top: 30px;
+  width: 100%;
+  margin: 30px;
 }
 
 /* texto de de img cambiantes */
+.carousel-caption {
+  grid-area: main;
+}
 .carousel-caption p {
-  display: flex;
-  justify-content: center;
-  grid-area: section;
   color: white;
   background-color: #4C3D3D;
-  padding: 5px;
-}
-.carousel-caption p .servicio-proximo {
-  display: inline;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 .servicio-proximo {
+  grid-area: main;
   display: flex;
-  justify-content: center;
-}
-.servicio-proximo .card, .servicio-proximo .mb-3 {
-  margin: 30px;
-  width: 650px;
+  padding-top: 20px;
 }
 .servicio-proximo h3 {
   margin: 20px;
@@ -1267,7 +1278,7 @@
   margin: 1px 15px;
 }
 .mini-form-serv .botones-servicio {
-  grid-area: section;
+  grid-area: main;
   display: inline;
 }
 .mini-form-serv .botones-servicio .enviar-servicios {
@@ -1321,99 +1332,53 @@
   .body-servicios {
     display: grid;
     grid-template-columns: 1fr;
-    justify-content: start;
-    grid-template-areas: "header" "main" "section" "footer";
+    grid-template-areas: "header" "main" "footer";
   }
-  /* header menu se quees elmismo que arriba lo tengo que cambiar. */
-  .header__menu {
+  /* header menu se quees el mismo que arriba lo tengo que cambiar. */
+  .header-index {
     grid-area: header;
   }
-  .header__menu .navbar {
-    justify-content: center;
-    width: 110px;
-    padding-left: 10px;
-  }
-  .header__divLogo {
-    grid-area: header;
-  }
-  .header__menu__sector div ul {
-    margin-top: 10px;
-  }
-  .header__menu__sector div ul li {
-    grid-area: header;
-    width: 100%;
-    height: 30px;
-    font-size: 12px;
-  }
-  /* tarjetas de servicios  respnsive*/
+  /* tarjetas de servicios respnsive*/
   .main-servicios {
     grid-area: main;
     display: inline-block;
+    width: 100%;
     /* img de las targetas */
   }
-  .main-servicios .card.body {
-    width: 200px;
-  }
   .main-servicios .card-servicios {
-    text-align: center;
-    grid-area: section;
-    margin: 10px;
-  }
-  .main-servicios .card-servicios .mb-3 {
-    width: 400px;
-    font-size: 12px;
-    margin-left: 30px;
-  }
-  .main-servicios .card-servicios .col-md-2 img {
-    height: 450px;
-    width: 250px;
+    grid-area: main;
+    margin: 0px;
+    padding: 15px;
   }
   .main-servicios .servicio-img {
-    grid-area: main;
-    display: inline-block;
-    margin-top: 0;
-    /* texto de de img cambiantes */
+    margin: 0px;
+    padding: 15px;
   }
   .main-servicios .servicio-img .carousel-inner {
-    width: 450px;
-    margin-left: 20px;
-  }
-  .main-servicios .servicio-img .carousel-caption p {
-    display: inline;
-    width: 400px;
-    color: white;
-    background-color: #4C3D3D;
-    padding: 5px;
-  }
-  .main-servicios .servicio-img .carousel-caption p .servicio-proximo {
-    display: inline;
-  }
-  .main-servicios .servicio-img .servicio-proximo .card, .main-servicios .servicio-img .servicio-proximo .mb-3 {
-    margin: 30px;
-    width: 430px;
+    width: 100%;
   }
   .main-servicios .mini-form-serv {
     display: inline-block;
-    margin: 0;
+    margin: 10px;
   }
   .main-servicios .mini-form-serv .botones-servicio {
     grid-area: section;
   }
   .main-servicios .mini-form-serv .botones-servicio .enviar-servicios {
-    width: 380px;
-    height: 50px;
-    margin: 50px 30px 0;
+    width: 100%;
+    margin: 60px 0 0 5px;
   }
   .main-servicios .mini-form-serv .botones-servicio .enviar-servicios:active {
     background: linear-gradient(#C07F00, #FFD95A);
   }
   .main-servicios .mini-form-serv .botones-servicio h4 {
     text-align: center;
-    padding: 4px;
+    padding: 10px;
+    width: 100%;
   }
   .main-servicios .mini-form-serv .botones-servicio .btn-group {
     display: inline-block;
-    margin: 10px 0;
+    margin: 0;
     text-align: center;
     width: 100%;
   }
@@ -1433,7 +1398,10 @@
   background-color: #4C3D3D;
   font-family: "Roboto-Regular";
   display: grid;
-  grid-template-areas: "header header " "main main" "form form" "footer footer";
+  grid-template-areas: "header header " "main main" "footer footer";
+}
+.body-form p {
+  font-size: 18px;
 }
 
 .header-form {
@@ -1448,8 +1416,11 @@
 }
 .main-form h1 {
   grid-area: main;
-  background-color: #FFD95A;
+  font-size: 25px;
   text-align: center;
+  color: #4C3D3D;
+  padding: 10px;
+  background-color: #FFD95A;
 }
 
 /* condicional de modo-aniversario */
@@ -1459,37 +1430,35 @@
 
 /* Separacion de los elementos del formulario + tipografia */
 label {
-  display: block;
-  font-family: "Roboto-Regular";
-  font-size: 18px;
+  width: 100%;
+  font-size: 20px;
 }
 
 /* Iput textarea innline con fuente */
-input, textarea, .inline {
+input {
   display: block;
-  font-family: "Roboto-Regular";
-  height: 30px;
-}
-
-/* Anchura de imput y select */
-input, select {
+  margin: 10px 0;
+  border: white;
+  font-size: 16px;
+  padding: 10px;
   width: 100%;
-  height: 25px;
+  height: 50%;
 }
 
 /* Separacion de los selectores de opciones */
 .form-select {
   padding: 0;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 /* dimenciones del formulario */
-form {
+.contratacion-form {
   grid-area: form;
   max-width: 700px;
   min-width: 300px;
   width: 80vw;
-  padding: 8px;
+  padding: 10px;
+  background-color: #FFF7D4;
 }
 
 /* Boton enviar  personalizado*/
@@ -1504,14 +1473,13 @@ input[id=submit] {
   width: 400px;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 40px;
   background: #C07F00;
   border: #4C3D3D 2px solid;
   border-radius: 10px;
   color: black;
 }
 input[id=submit]:hover {
-  background: radial-gradient(circle at center, #C07F00, #FFD95A);
+  background: radial-gradient(circle at center, #FFD95A, #C07F00);
   box-shadow: 0 0 5px #C07F00, 0 0 25px #C07F00, 0 0 50px #C07F00, 0 0 100px #C07F00;
 }
 
@@ -1521,53 +1489,48 @@ input[id=submit]:hover {
 }
 
 /* fondo de los titulos del form */
-.opciones-titulo {
-  background-color: #C07F00;
+.opciones-servicios h3 {
+  background-color: #FFD95A;
   font-size: 25px;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
-  font-weight: 700;
+}
+.opciones-servicios .form-check-label {
+  margin-left: 10px;
+}
+
+.form-select {
+  padding: 5px;
 }
 
 /* fonndo y margen de formulario  */
-fieldset {
-  background-color: #FFF7D4;
-  padding: 10px;
-}
-
 p[type=text] {
   text-align: center;
   margin-left: 10px;
 }
 
-/* FOOTER FORM----el mismo que galeria----- */
-.footer-galeria {
-  grid-area: footer;
-}
-
-#dropdown {
-  margin: 10px 0;
-}
-
-.comentario h2 {
+.msj-proyecto h2 {
   text-align: center;
-  background-color: #C07F00;
+  background-color: #FFD95A;
   font-family: "Roboto-Bold";
   font-size: 25px;
-  padding: 5px;
+  padding: 10px;
 }
-.comentario h2 #comentario-1 {
-  height: 100px;
-  margin-bottom: 10px;
+.msj-proyecto #comentario-1 {
+  padding: 10px;
+  width: 100%;
 }
 
 .titulo-01-serv h3 {
-  background-color: #C07F00;
   font-size: 25px;
   text-align: center;
-  font-weight: 700;
-  padding: 3px;
+  padding: 5px;
   margin-top: 10px;
+}
+
+/* --------------FOOTER FORM----el mismo que galeria----- */
+.footer-galeria {
+  grid-area: footer;
 }
 
 /*-------------------- Media Queries Formulario ---------------------- */
@@ -1578,25 +1541,40 @@ p[type=text] {
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "footer";
   }
+  .body-form p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .header-index {
+    grid-area: header;
+  }
   .main-form {
     grid-area: main;
-    margin: 10px;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+  }
+  .main-form h1 {
+    font-size: 14px;
   }
   label {
     font-size: 16px;
   }
-  input, textarea, .inline {
+  input, .inline {
     height: 20px;
-  }
-  input, select {
     width: 100%;
-    height: 35px;
   }
-  form {
-    width: 90vw;
+  .form-select {
+    margin: 0px;
+  }
+  .contratacion-form {
+    grid-area: form;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFF7D4;
   }
   input[id=submit] {
-    width: 300px;
+    width: 100%;
     margin-top: 15px;
     margin-bottom: 20px;
     height: 40px;
@@ -1605,28 +1583,43 @@ p[type=text] {
     background-color: #FFD95A;
     color: black;
   }
-  .form-check-input {
-    width: 20px;
-    height: 20px;
-  }
-  .opciones-titulo {
-    font-size: 16px;
-  }
-  .footer-galeria {
-    grid-area: footer;
-  }
-  .comentario h2 {
-    font-size: 16px;
-  }
-  #comentario-1 {
-    max-width: 400px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-  .titulo-01-serv h3 {
-    font-size: 16px;
-  }
 }
+/* fondo de los titulos del form */
+.opciones-servicios h3 {
+  font-size: 15px;
+  padding: 12px;
+}
+
+/* fonndo y margen de formulario  */
+p[type=text] {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.msj-proyecto h2 {
+  text-align: center;
+  background-color: #FFD95A;
+  font-family: "Roboto-Bold";
+  font-size: 15px;
+  padding: 10px;
+}
+.msj-proyecto #comentario-1 {
+  padding: 10px;
+  width: 100%;
+}
+
+.titulo-01-serv h3 {
+  font-size: 15px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+/* FOOTER FORM----el mismo que galeria----- */
+.footer-galeria {
+  grid-area: footer;
+}
+
 /* COSAS POR HACER  */
 
 /*# sourceMappingURL=estilos.css.map */

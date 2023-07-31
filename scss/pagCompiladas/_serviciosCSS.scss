@@ -3,11 +3,10 @@
     background-color: $fondo-oscuro;
     font-family: "Roboto-Regular";
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr 1fr ;
     grid-template-areas:
     "header header"
     "main main"
-    "section section"
     "footer footer";
 }
 /* header index el mismo en todos POR AHORA... */
@@ -31,36 +30,28 @@
 } 
 /* tarjetas de servicios */
 .card-servicios{
-    grid-area: section;
-    margin: 30px;
-    .mb-3{
-        width: 800px;
-    }
+    grid-area: main;
+    margin: 20px;
 }
-/* img de las targetas */
 .servicio-img{
-    grid-area: section;
-    margin-top: 30px;
+    width: 100%;
+    margin: 30px;
 }
 /* texto de de img cambiantes */
-.carousel-caption p{
-    display: flex;
-    justify-content: center;    
-    grid-area: section;
-    color: white;
-    background-color: $fondo-oscuro;
-    padding: 5px;
-    .servicio-proximo{
-        display: inline;
+.carousel-caption{
+    grid-area: main;
+    p{
+        color: white;
+        background-color: $fondo-oscuro;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
     }
 }
 .servicio-proximo{
+    grid-area: main;
     display: flex;
-    justify-content: center;
-    .card, .mb-3{
-        margin: 30px;
-        width: 650px;
-    }
+    padding-top: 20px;
     h3{
         margin: 20px;
         text-align: center;
@@ -73,7 +64,7 @@
     justify-content: start;
     margin: 1px 15px;
     .botones-servicio{
-        grid-area: section;
+        grid-area: main;
         display: inline;
         .enviar-servicios{
             @include BtnEnviar(700, uppercase, 1s, pointer , 0.3em );
