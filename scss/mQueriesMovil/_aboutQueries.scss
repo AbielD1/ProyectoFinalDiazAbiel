@@ -37,6 +37,7 @@
             text-align: center;
         }
     }
+    /* Img + descripcion contenedor padre */
     .img-y-descripcion {
         grid-area: main;
         display: inline-block;
@@ -44,14 +45,17 @@
             width: 100%;
         }
     }
+     /* Contenedor de PARRAFO 1 */
     .biografia-1{
         width: 100%;
     }
+    /* TEXTO PARRAFO 1 */
     .parrafo1{
         padding: 20px;              
         font-size: 18px;
         margin: 10px;
     }
+     /* Contenedor de PARRAFO 2 */
     .biografia-2{
         width: 100%;
     }

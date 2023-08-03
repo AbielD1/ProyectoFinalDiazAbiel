@@ -1,0 +1,24 @@
+/* CODICIONAL DE ESTILO ANIVERSARIO año 1 */
+@if $estiloPorfolio == aniversario-1°{
+    .body-index{
+        background-color: #4F200D;                                    
+    }
+    .header__menu{
+        background: linear-gradient(to top, #F98404, #F1B258);
+    }
+    .footer__index{
+        background: linear-gradient(to bottom, #F98404, #F1B258);
+    }
+}
+@else{
+    .body-index{
+        background-color: $fondo-oscuro
+    } 
+    .header__menu{
+        background-color: $fondo-perla;
+    }
+    .footer__index{
+        background-color: $fondo-amarillento;
+    }
+}
+/* ------------------------------------------------------------ */

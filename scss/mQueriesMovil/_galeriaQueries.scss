@@ -10,19 +10,24 @@
         "aside" 
         "footer";
     }
-    /* header menu se quees elmismo que arriba lo tengo que cambiar. */
+    /* header unico con parametros*/
     .header__menu{
         grid-area: header;
         flex-wrap: wrap;
+        h1{
+            display: none;
+        }
         .navbar{
             justify-content: center;
             width: 110px;
-            padding-left: 10px ;
+            padding-left: 10px;
         }
     }
+    /* CONTENEDOR del logo  */
     .header__divLogo{
         grid-area: header;
     }
+    /* Enlaces de las pages del proyecto */
     .header__menu__sector div ul{
         margin-top: 10px;
         li{
@@ -64,6 +69,7 @@
             }
         }
     }
+    /* card con transicion de cambio de color  */
     .card{
         transition: all 300ms;
         &:active{
@@ -91,6 +97,7 @@
             padding: 10px;
         }
     }
+    /* Servicio nuevo prox */
     .article-galeria-aclaracion{
         display: inline;
         p{
@@ -98,8 +105,7 @@
             padding: 10px;
         }
         img{
-            width: 360px;
-            margin-left: 35px;
+            width: 100%;
             transition: 1s;
             &:active{
                 transform: scale(0.95);

@@ -8,15 +8,16 @@
         "main"
         "footer";
     }
-    /* header menu se quees el mismo que arriba lo tengo que cambiar. */
+    /* header unico*/
     .header-index{
         grid-area: header;
     }
-    /* tarjetas de servicios respnsive*/
+   /*  main servicios responsive  */
     .main-servicios{
         grid-area: main ;
         display: inline-block;
         width: 100%;
+        /* cards de servicios */
         .card-servicios{
             grid-area: main;
             margin: 0px;
@@ -30,6 +31,18 @@
         width: 100%;
     }    
 }
+    /* Iconos de las actividades de  las card */
+    .icon-act-1{
+        display: flex;
+        justify-content: space-around;
+        div{
+            margin: 0;
+        }
+        .icon-1{
+            width: auto;
+        }
+    }
+    /* Mini-form servicio responsive */
     .mini-form-serv{
         display: inline-block;
         margin: 10px;

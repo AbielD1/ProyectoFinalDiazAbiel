@@ -40,26 +40,24 @@
             padding: 15px;
             font-size: 14px;
         }
+        /* Frase aclaratoria */
         .frase-epica {
             font-size: 20px;
             width: 100%;
             margin: 0;
         }
+        /* Inconos + enlaces de redes y contacto */
         .section__icon__apps{
             grid-area: main;
-            text-align: center;
-            margin: 10px;
-             /* Separacion de iconos de redes y contactos */
-            a img{
-                width: 50px;
-                margin: 10px;
-            }
+            justify-content: center;
         }
+        /* Titulos de otros proyectos */
         .h2-otros-proyectos-contacto{
             width: 100%;
             background-color: $fondo-amarillento;
             text-align: center;
         } 
+        /* Otros proyectos + img y texto */
         .otro-proyecto{
             margin: 20px;
             display: flex;
@@ -76,19 +74,22 @@
                 }
             }
         }
+        /* Mapa contenedor  */
         .map{
             grid-area: section;
-            /* Mapa de ubicacion parrafo */
+            /* Mapa  */
             iframe{
                 width: 120%;  
             }
-                p{
-                    background-color:$fondo-amarillento;
-                    text-align: center;
-                    font-size: 20px;
-                    height: 30px;
-                    width: 100%;
-                }   
+            /* MAPA TEXTO  */
+            p{
+                background-color:$fondo-amarillento;
+                text-align: center;
+                font-size: 20px;
+                height: 30px;
+                width: 100%;
+            } 
+            /* mini form + comentario */  
         .form-contacto{
             grid-area: main;
             margin: 0;
@@ -99,9 +100,9 @@
             }
         /* comentario de tu  interez */
         .cometario{
-            width: 100%;
-            margin: 10px;
+            padding: 20px;
         }
+        /* Boton de enviar */
         .enviar-contacto{
             height: 50px;
             width: 100%;

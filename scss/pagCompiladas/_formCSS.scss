@@ -11,9 +11,11 @@
         font-size: 18px;    
     }
 }
+/* header unico */
 .header-form{
     grid-area: header;
 }
+/* main form resposive  */
 .main-form{
     grid-area: main;
     display: flex;
@@ -70,12 +72,10 @@ input{
 }
 /* Boton enviar  personalizado*/
 input[id="submit"]{
-    @include BtnEnviar(700, uppercase, 1s, pointer , 0.3em );
-    margin:20px auto;
+    @include BtnEnviar(700, uppercase, 1s, pointer , 8px );
+    margin: 20px auto;
     display: block;
     width: 400px;
-    margin-top: 20px;
-    margin-bottom: 20px;        
     background: $fondo-dorado;
     border: $fondo-oscuro 2px solid;
     border-radius: 10px;
@@ -94,7 +94,7 @@ input[id="submit"]{
 }
 /* fondo de los titulos del form */
 .opciones-servicios{
-    h3{
+    h2{
         background-color: $fondo-amarillento;
         font-size: 25px;
         padding: 10px;
@@ -113,6 +113,7 @@ p[type="text"]{
     text-align:center;
     margin-left:10px ;     
 }
+/* comentario de solicitud de servicio  */
 .msj-proyecto{
     h2{
         text-align:center;
@@ -126,8 +127,10 @@ p[type="text"]{
         width: 100%;
     }
 }  
+/* aficacion ultimo  titulo */
 .titulo-01-serv{
     h3{
+        background-color: $fondo-amarillento;
         font-size: 25px;
         text-align: center;
         padding: 5px;

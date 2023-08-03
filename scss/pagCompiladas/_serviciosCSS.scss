@@ -32,11 +32,48 @@
 .card-servicios{
     grid-area: main;
     margin: 20px;
+    h1,h2,h3{
+        font-size: 20px;
+    }
 }
 .servicio-img{
     width: 100%;
-    margin: 30px;
+    margin: 15px;
 }
+/* 3 iconos por cada servicio a dar que tienen relacion con ellos  */
+.icon-act-1{
+    display: flex;
+    justify-content: center;
+    div{
+        text-align: center  ;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 10px 20px 0 10px;
+    }
+    /* ICONOS 1 2 y 3 con maps y mixin  */
+    .icon-1{
+        background-color: map-get($icon-servicios, icon-1);
+        @include Icon-Servicios(0.6s, 1.20, $fondo-perla);
+        @include TextoIconos (1s , rgba(0,0,0,0), underline solid $fondo-dorado, 16px, center, black);
+    }      
+    .icon-2{
+        background-color: map-get($icon-servicios, icon-2);
+        @include Icon-Servicios(0.6s, 1.20, $fondo-perla);
+        @include TextoIconos (1s , rgba(0,0,0,0), underline solid $fondo-dorado, 16px, center, black);
+    }
+    .icon-3{
+        background-color: map-get($icon-servicios, icon-3);
+        @include Icon-Servicios(0.6s, 1.20, $fondo-perla);
+        @include TextoIconos (1s , rgba(0,0,0,0), underline solid $fondo-dorado, 16px, center, black)
+    }
+}
+    /* aplicando extend a los demas iconos */
+    .icon-act-2{
+        @extend .icon-act-1;
+    }
+    .icon-act-3{
+        @extend .icon-act-1;
+    }
 /* texto de de img cambiantes */
 .carousel-caption{
     grid-area: main;
@@ -52,17 +89,20 @@
     grid-area: main;
     display: flex;
     padding-top: 20px;
-    h3{
+    h5{
         margin: 20px;
         text-align: center;
+        font-size: 30px;
     }
 }
-
 /* botones con mini-form de eleccion de servicio */
 .mini-form-serv{
     display: flex;
-    justify-content: start;
-    margin: 1px 15px;
+    justify-content: center;
+    margin: 10px 15px;
+    h4{
+        margin: 20px 0 10px 0;
+    }
     .botones-servicio{
         grid-area: main;
         display: inline;
@@ -72,7 +112,7 @@
             font-size: 16px;
             width: 360px;
             height: 50px;
-            margin: 10px 150px ;
+            margin: 10px 170px ;
             border-radius: 30px;
             background-color: $fondo-perla;
             &:hover{

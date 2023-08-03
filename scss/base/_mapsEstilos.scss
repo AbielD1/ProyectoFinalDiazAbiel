@@ -1,5 +1,3 @@
-/*------------------- MAPAS DE ESTILOS --------------------- */
-
 
 /* MEDIOS-CONTACTO ESTILOS */
 $medios-contacto:(
@@ -7,4 +5,10 @@ $medios-contacto:(
     linkedin: #0A66C2,
     email: #22aff0,
     instagram: #c72525
+);
+/* Colores de los iconos de servicio */
+$icon-servicios:(
+    icon-1: $fondo-amarillento,
+    icon-2: $fondo-amarillento,
+    icon-3: $fondo-amarillento
 );

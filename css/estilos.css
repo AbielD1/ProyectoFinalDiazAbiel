@@ -1,15 +1,19 @@
 @charset "UTF-8";
-/* Inidex CSS ESTILOS POR EVENTO */
+/* Colores Principales del peroyecto */
+/* Inidex CSS ESTILOS POR EVENTO colocar 1 enntre - ° para habilitar el estilo  recuerda compliar en sass antes*/
 /* animacion solo para desktop */
-/*------------------- MAPAS DE ESTILOS --------------------- */
 /* MEDIOS-CONTACTO ESTILOS */
+/* Colores de los iconos de servicio */
+/* Botones de enviar con algunas caracteriticas similares */
+/* iconos de servicios trasformacion */
+/* texto de los iconos */
 /* Margen y padding universales */
 * {
   padding: 0px;
   margin: 0;
 }
 
-/* Fuemtes utilizadas */
+/* Fuentes utilizadas */
 @font-face {
   font-family: Roboto-Regular;
   src: url(../Font/Roboto-Regular.ttf);
@@ -46,6 +50,11 @@
   /* Header menu con barra de nav */
   /* Animacion de cajas */
 }
+.header__menu h1 {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Roboto-Bold";
+}
 .header__menu .navbar {
   width: 100%;
   justify-content: right;
@@ -59,12 +68,12 @@
   justify-content: right;
   align-items: center;
   margin-bottom: 0;
-  padding: 0;
+  padding: 0px;
 }
 .header__menu .animaciones-cajas li {
   list-style-type: none;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   background: #fff;
   border-radius: 50px;
   animation: animate 3s ease-in-out infinite;
@@ -87,13 +96,14 @@
 .header__menu .animaciones-cajas li:nth-child(3) {
   animation-delay: -1000ms;
   background: #4C3D3D;
+  margin-left: 10px;
 }
 @keyframes animate {
   30%, 100% {
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
   20% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 
@@ -171,6 +181,7 @@
   background-color: #C07F00;
   padding: 10px;
   width: 800px;
+  border-radius: 10px;
   /* TITULO info personal  */
   /* Parrafo info personal */
 }
@@ -195,18 +206,18 @@
   padding: 10px;
   /* Separacion de iconos de redes y contactos */
 }
-.section__icon__apps a img {
+.section__icon__apps a {
   width: 65px;
   padding: 5px;
-  margin: 2px;
+  margin: 10px;
 }
-.section__icon__apps button {
+.section__icon__apps a img {
   margin: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   border-color: #FFD95A;
   transition: all 0.5s;
 }
-.section__icon__apps button:hover {
+.section__icon__apps a img:hover {
   transform: scale(0.85);
 }
 
@@ -286,7 +297,7 @@
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "footer";
   }
-  /* header menu index */
+  /* header menu index con parametros  */
   .header__menu {
     grid-area: header;
     display: flex;
@@ -303,7 +314,7 @@
   .header__menu .navbar-toggler {
     display: flex;
   }
-  /* header con logo */
+  /* header  div del logo */
   .header__divLogo {
     padding: 0;
     width: 100px;
@@ -344,22 +355,21 @@
   /* Foto con margen para movil */
   .foto__abiel {
     grid-area: main;
-    margin: 15px 5px;
+    margin: 0;
     /* Foto con bordes movil */
   }
   .foto__abiel img {
-    margin: 0;
+    margin: 10px;
     grid-area: main;
     border-radius: 40px;
-    width: 400px;
-    max-height: 600px;
+    width: 95%;
     background-image: url(../img/Fotos-perfil/Foto-perfil-responsive.jpg);
   }
   /* info personal movil */
   .section__info__personal {
     grid-area: main;
     margin: 10px;
-    padding: 0px;
+    padding: 5px;
     width: 100%;
     /* info personal parrafo movil */
   }
@@ -369,9 +379,15 @@
     font-size: 1.1em;
   }
   /* Inconos de redes */
-  .section__icon__apps a img {
-    border-radius: 20px;
-    width: 55px;
+  .section__icon__apps {
+    border-radius: 10px;
+    padding: 0px;
+    width: 100%;
+  }
+  .section__icon__apps a {
+    width: 65px;
+    padding: 0px;
+    margin: 10px;
   }
   /* FOOTER INDEX RESPOSIVE  */
   .footer__index {
@@ -390,7 +406,7 @@
     margin-left: 200px;
   }
   .articulo__index__serv img {
-    margin-left: 160px;
+    margin-left: 120px;
   }
   .articulo__index__serv p {
     grid-area: footer;
@@ -435,6 +451,9 @@
 .main-galeria .card {
   width: auto;
 }
+.main-galeria .card h1 {
+  font-size: 20px;
+}
 
 /* Todos los protyectos img */
 /* Secciones de todas la galeria  */
@@ -453,6 +472,7 @@
   transform: scale(0.92);
 }
 
+/* card BS contenedor con tracicion de color  */
 .card {
   width: 100%;
   background-color: #FFD95A;
@@ -480,12 +500,12 @@
   /* ASIDE de Galeria titulo */
   /* Parrafo de titulo de los iframe */
 }
-.aside-galeria h1 {
+.aside-galeria h2 {
   grid-area: aside;
   display: flex;
   justify-content: center;
   font-family: "Roboto-Bold";
-  font-size: 20px;
+  font-size: 30px;
   padding: 10px;
 }
 .aside-galeria .p-1 {
@@ -502,13 +522,14 @@
   text-align: center;
 }
 
-.article-galeria-aclaracion p {
+.article-galeria-aclaracion h3 {
   width: 100%;
   font-size: 16px;
   padding: 20px;
+  background-color: #FFD95A;
 }
 .article-galeria-aclaracion img {
-  width: 400px;
+  width: 100%;
   transition: 1s;
 }
 .article-galeria-aclaracion img:hover {
@@ -521,6 +542,7 @@
   text-align: center;
 }
 
+/* condicional de aniversario 1° año  */
 .body-index {
   background-color: #4C3D3D;
 }
@@ -537,12 +559,12 @@
 .footer-galeria a {
   text-decoration: none;
 }
-.footer-galeria h2 {
+.footer-galeria h4 {
   font-family: "Roboto-Bold";
   color: #4C3D3D;
-  font-size: 35px;
+  font-size: 30px;
 }
-.footer-galeria h2:hover {
+.footer-galeria h4:hover {
   color: white;
   transition: 0.5s;
 }
@@ -555,19 +577,24 @@
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "section" "aside" "footer";
   }
-  /* header menu se quees elmismo que arriba lo tengo que cambiar. */
+  /* header unico con parametros*/
   .header__menu {
     grid-area: header;
     flex-wrap: wrap;
+  }
+  .header__menu h1 {
+    display: none;
   }
   .header__menu .navbar {
     justify-content: center;
     width: 110px;
     padding-left: 10px;
   }
+  /* CONTENEDOR del logo  */
   .header__divLogo {
     grid-area: header;
   }
+  /* Enlaces de las pages del proyecto */
   .header__menu__sector div ul {
     margin-top: 10px;
   }
@@ -609,6 +636,7 @@
   .section__todos__proyectos .card-img-top:active {
     transform: scale(0.92);
   }
+  /* card con transicion de cambio de color  */
   .card {
     transition: all 300ms;
   }
@@ -636,6 +664,7 @@
     font-size: 15px;
     padding: 10px;
   }
+  /* Servicio nuevo prox */
   .article-galeria-aclaracion {
     display: inline;
   }
@@ -644,8 +673,7 @@
     padding: 10px;
   }
   .article-galeria-aclaracion img {
-    width: 360px;
-    margin-left: 35px;
+    width: 100%;
     transition: 1s;
   }
   .article-galeria-aclaracion img:active {
@@ -808,6 +836,7 @@
   color: black;
 }
 
+/* condicional de aniversario 1 */
 .body-index {
   background-color: #4C3D3D;
 }
@@ -854,6 +883,7 @@
     font-size: 16px;
     text-align: center;
   }
+  /* Img + descripcion contenedor padre */
   .img-y-descripcion {
     grid-area: main;
     display: inline-block;
@@ -861,14 +891,17 @@
   .img-y-descripcion img {
     width: 100%;
   }
+  /* Contenedor de PARRAFO 1 */
   .biografia-1 {
     width: 100%;
   }
+  /* TEXTO PARRAFO 1 */
   .parrafo1 {
     padding: 20px;
     font-size: 18px;
     margin: 10px;
   }
+  /* Contenedor de PARRAFO 2 */
   .biografia-2 {
     width: 100%;
   }
@@ -931,11 +964,17 @@
   justify-content: space-evenly;
 }
 
+/* info de contacto titulo y parrafo */
 .info-articulo {
   grid-area: section;
   justify-content: center;
   /* contenedor contacto */
   /* Lista de contenido asociado */
+  /* redes y comentario div */
+  /* Seccion de iconos de redes y contactos */
+  /* titulo de otros proyectos */
+  /* otros proyectos img + texto y link */
+  /* map de los botones de redes y contacto  */
 }
 .info-articulo h1 {
   background-color: #FFD95A;
@@ -968,19 +1007,6 @@
 .info-articulo .section__icon__apps {
   grid-area: section;
   justify-content: left;
-  /* Separacion de iconos de redes y contactos */
-}
-.info-articulo .section__icon__apps a img {
-  padding: 10px;
-  width: 100%;
-}
-.info-articulo .section__icon__apps button {
-  border-radius: 20px;
-  border-color: #FFD95A;
-  transition: all 0.5s;
-}
-.info-articulo .section__icon__apps button:hover {
-  transform: scale(0.85);
 }
 .info-articulo .h2-otros-proyectos-contacto {
   width: 30%;
@@ -1017,11 +1043,13 @@
   background-color: #c72525;
 }
 
-/* Mapa de ubicacion */
+/* Mapa div padre */
 .map {
   grid-area: section;
   text-align: center;
-  /* Mapa de ubicacion parrafo */
+  /* map */
+  /* Mapa de ubicacion texto */
+  /* mini form de comentario  */
 }
 .map iframe {
   width: 80%;
@@ -1035,16 +1063,17 @@
 .map .form-contacto {
   grid-area: main;
   /* comentario de tu  interez */
+  /* boton enviar  */
 }
 .map .form-contacto h2 {
   background-color: #FFD95A;
   font-size: 20px;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
 }
 .map .form-contacto .cometario {
   height: 40%;
-  width: 100%;
+  width: 95%;
   border: #FFD95A solid 5px;
 }
 .map .form-contacto .enviar-contacto {
@@ -1109,6 +1138,11 @@
     display: inline;
     /* contenedor contacto */
     /*  Lista de contenido asociado */
+    /* Frase aclaratoria */
+    /* Inconos + enlaces de redes y contacto */
+    /* Titulos de otros proyectos */
+    /* Otros proyectos + img y texto */
+    /* Mapa contenedor  */
   }
   .info-articulo h1 {
     font-size: 30px;
@@ -1136,13 +1170,7 @@
   }
   .info-articulo .section__icon__apps {
     grid-area: main;
-    text-align: center;
-    margin: 10px;
-    /* Separacion de iconos de redes y contactos */
-  }
-  .info-articulo .section__icon__apps a img {
-    width: 50px;
-    margin: 10px;
+    justify-content: center;
   }
   .info-articulo .h2-otros-proyectos-contacto {
     width: 100%;
@@ -1165,7 +1193,9 @@
   }
   .info-articulo .map {
     grid-area: section;
-    /* Mapa de ubicacion parrafo */
+    /* Mapa  */
+    /* MAPA TEXTO  */
+    /* mini form + comentario */
   }
   .info-articulo .map iframe {
     width: 120%;
@@ -1181,6 +1211,7 @@
     grid-area: main;
     margin: 0;
     /* comentario de tu  interez */
+    /* Boton de enviar */
   }
   .info-articulo .map .form-contacto h2 {
     height: 0px;
@@ -1188,8 +1219,7 @@
     padding: 0;
   }
   .info-articulo .map .form-contacto .cometario {
-    width: 100%;
-    margin: 10px;
+    padding: 20px;
   }
   .info-articulo .map .form-contacto .enviar-contacto {
     height: 50px;
@@ -1243,12 +1273,92 @@
   grid-area: main;
   margin: 20px;
 }
+.card-servicios h1, .card-servicios h2, .card-servicios h3 {
+  font-size: 20px;
+}
 
 .servicio-img {
   width: 100%;
-  margin: 30px;
+  margin: 15px;
 }
 
+/* 3 iconos por cada servicio a dar que tienen relacion con ellos  */
+.icon-act-1, .icon-act-3, .icon-act-2 {
+  display: flex;
+  justify-content: center;
+  /* ICONOS 1 2 y 3 con maps y mixin  */
+}
+.icon-act-1 div, .icon-act-3 div, .icon-act-2 div {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 10px 20px 0 10px;
+}
+.icon-act-1 .icon-1, .icon-act-3 .icon-1, .icon-act-2 .icon-1 {
+  background-color: #FFD95A;
+  transition: 0.6s;
+}
+.icon-act-1 .icon-1:hover, .icon-act-3 .icon-1:hover, .icon-act-2 .icon-1:hover {
+  transform: scale(1.2);
+  background-color: #FFF7D4;
+}
+.icon-act-1 .icon-1 p, .icon-act-3 .icon-1 p, .icon-act-2 .icon-1 p {
+  transition: 1s;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: underline solid #C07F00;
+  font-size: 16px;
+  text-align: center;
+}
+.icon-act-1 .icon-1 p:hover, .icon-act-3 .icon-1 p:hover, .icon-act-2 .icon-1 p:hover {
+  color: black;
+}
+.icon-act-1 .icon-1 p:focus, .icon-act-3 .icon-1 p:focus, .icon-act-2 .icon-1 p:focus {
+  color: black;
+}
+.icon-act-1 .icon-2, .icon-act-3 .icon-2, .icon-act-2 .icon-2 {
+  background-color: #FFD95A;
+  transition: 0.6s;
+}
+.icon-act-1 .icon-2:hover, .icon-act-3 .icon-2:hover, .icon-act-2 .icon-2:hover {
+  transform: scale(1.2);
+  background-color: #FFF7D4;
+}
+.icon-act-1 .icon-2 p, .icon-act-3 .icon-2 p, .icon-act-2 .icon-2 p {
+  transition: 1s;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: underline solid #C07F00;
+  font-size: 16px;
+  text-align: center;
+}
+.icon-act-1 .icon-2 p:hover, .icon-act-3 .icon-2 p:hover, .icon-act-2 .icon-2 p:hover {
+  color: black;
+}
+.icon-act-1 .icon-2 p:focus, .icon-act-3 .icon-2 p:focus, .icon-act-2 .icon-2 p:focus {
+  color: black;
+}
+.icon-act-1 .icon-3, .icon-act-3 .icon-3, .icon-act-2 .icon-3 {
+  background-color: #FFD95A;
+  transition: 0.6s;
+}
+.icon-act-1 .icon-3:hover, .icon-act-3 .icon-3:hover, .icon-act-2 .icon-3:hover {
+  transform: scale(1.2);
+  background-color: #FFF7D4;
+}
+.icon-act-1 .icon-3 p, .icon-act-3 .icon-3 p, .icon-act-2 .icon-3 p {
+  transition: 1s;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: underline solid #C07F00;
+  font-size: 16px;
+  text-align: center;
+}
+.icon-act-1 .icon-3 p:hover, .icon-act-3 .icon-3 p:hover, .icon-act-2 .icon-3 p:hover {
+  color: black;
+}
+.icon-act-1 .icon-3 p:focus, .icon-act-3 .icon-3 p:focus, .icon-act-2 .icon-3 p:focus {
+  color: black;
+}
+
+/* aplicando extend a los demas iconos */
 /* texto de de img cambiantes */
 .carousel-caption {
   grid-area: main;
@@ -1266,16 +1376,20 @@
   display: flex;
   padding-top: 20px;
 }
-.servicio-proximo h3 {
+.servicio-proximo h5 {
   margin: 20px;
   text-align: center;
+  font-size: 30px;
 }
 
 /* botones con mini-form de eleccion de servicio */
 .mini-form-serv {
   display: flex;
-  justify-content: start;
-  margin: 1px 15px;
+  justify-content: center;
+  margin: 10px 15px;
+}
+.mini-form-serv h4 {
+  margin: 20px 0 10px 0;
 }
 .mini-form-serv .botones-servicio {
   grid-area: main;
@@ -1291,7 +1405,7 @@
   font-size: 16px;
   width: 360px;
   height: 50px;
-  margin: 10px 150px;
+  margin: 10px 170px;
   border-radius: 30px;
   background-color: #FFF7D4;
 }
@@ -1334,16 +1448,19 @@
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "footer";
   }
-  /* header menu se quees el mismo que arriba lo tengo que cambiar. */
+  /* header unico*/
   .header-index {
     grid-area: header;
   }
-  /* tarjetas de servicios respnsive*/
+  /*  main servicios responsive  */
   .main-servicios {
     grid-area: main;
     display: inline-block;
     width: 100%;
+    /* cards de servicios */
     /* img de las targetas */
+    /* Iconos de las actividades de  las card */
+    /* Mini-form servicio responsive */
   }
   .main-servicios .card-servicios {
     grid-area: main;
@@ -1356,6 +1473,16 @@
   }
   .main-servicios .servicio-img .carousel-inner {
     width: 100%;
+  }
+  .main-servicios .icon-act-1, .main-servicios .icon-act-2, .main-servicios .icon-act-3 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .main-servicios .icon-act-1 div, .main-servicios .icon-act-2 div, .main-servicios .icon-act-3 div {
+    margin: 0;
+  }
+  .main-servicios .icon-act-1 .icon-1, .main-servicios .icon-act-2 .icon-1, .main-servicios .icon-act-3 .icon-1 {
+    width: auto;
   }
   .main-servicios .mini-form-serv {
     display: inline-block;
@@ -1404,10 +1531,12 @@
   font-size: 18px;
 }
 
+/* header unico */
 .header-form {
   grid-area: header;
 }
 
+/* main form resposive  */
 .main-form {
   grid-area: main;
   display: flex;
@@ -1467,12 +1596,10 @@ input[id=submit] {
   text-transform: uppercase;
   transition: 1s;
   cursor: pointer;
-  letter-spacing: 0.3em;
+  letter-spacing: 8px;
   margin: 20px auto;
   display: block;
   width: 400px;
-  margin-top: 20px;
-  margin-bottom: 20px;
   background: #C07F00;
   border: #4C3D3D 2px solid;
   border-radius: 10px;
@@ -1489,7 +1616,7 @@ input[id=submit]:hover {
 }
 
 /* fondo de los titulos del form */
-.opciones-servicios h3 {
+.opciones-servicios h2 {
   background-color: #FFD95A;
   font-size: 25px;
   padding: 10px;
@@ -1509,6 +1636,7 @@ p[type=text] {
   margin-left: 10px;
 }
 
+/* comentario de solicitud de servicio  */
 .msj-proyecto h2 {
   text-align: center;
   background-color: #FFD95A;
@@ -1521,7 +1649,9 @@ p[type=text] {
   width: 100%;
 }
 
+/* aficacion ultimo  titulo */
 .titulo-01-serv h3 {
+  background-color: #FFD95A;
   font-size: 25px;
   text-align: center;
   padding: 5px;
@@ -1545,9 +1675,11 @@ p[type=text] {
     font-size: 16px;
     margin-bottom: 5px;
   }
+  /* header unico  */
   .header-index {
     grid-area: header;
   }
+  /* Form main contenedor  */
   .main-form {
     grid-area: main;
     margin: 0px;
@@ -1557,26 +1689,31 @@ p[type=text] {
   .main-form h1 {
     font-size: 14px;
   }
+  /* tamanio de texto  de los casillas de escritura */
   label {
     font-size: 16px;
   }
+  /* casillas de escritura */
   input, .inline {
     height: 20px;
     width: 100%;
   }
+  /* Margen de selectores en BS*/
   .form-select {
     margin: 0px;
   }
+  /* fondo contenedor del form  */
   .contratacion-form {
     grid-area: form;
     width: 100%;
     padding: 10px;
     background-color: #FFF7D4;
   }
+  /* boton enviar  */
   input[id=submit] {
     width: 100%;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
     height: 40px;
   }
   input[id=submit]:active {
@@ -1585,7 +1722,7 @@ p[type=text] {
   }
 }
 /* fondo de los titulos del form */
-.opciones-servicios h3 {
+.opciones-servicios h2 {
   font-size: 15px;
   padding: 12px;
 }
@@ -1596,6 +1733,7 @@ p[type=text] {
   margin-left: 10px;
 }
 
+/* Comentario de solicitud del servicio  */
 .msj-proyecto h2 {
   text-align: center;
   background-color: #FFD95A;
@@ -1608,7 +1746,9 @@ p[type=text] {
   width: 100%;
 }
 
+/* titulo servicio 1 */
 .titulo-01-serv h3 {
+  background-color: #FFD95A;
   font-size: 15px;
   text-align: center;
   padding: 8px;
@@ -1620,6 +1760,20 @@ p[type=text] {
   grid-area: footer;
 }
 
+/* CODICIONAL DE ESTILO ANIVERSARIO año 1 */
+.body-index {
+  background-color: #4C3D3D;
+}
+
+.header__menu {
+  background-color: #FFF7D4;
+}
+
+.footer__index {
+  background-color: #FFD95A;
+}
+
+/* ------------------------------------------------------------ */
 /* COSAS POR HACER  */
 
 /*# sourceMappingURL=estilos.css.map */

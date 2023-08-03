@@ -126,6 +126,7 @@
     background-color: $fondo-amarillento;
     color:black
 }
+/* condicional de aniversario 1 */
 @if $estiloPorfolio == aniversario-1°{
     .body-about{
         background-color: #4F200D;                                    

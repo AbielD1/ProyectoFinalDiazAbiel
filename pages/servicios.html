@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios | Portfolio Díaz Abiel</title>
+    <!-- Meta descripcion keywords, links (BOOTSTRAP + SCRIPT), (CSS, FAVICON) -->
     <meta name="description" content="Aqui puedes ver los tres servicios principales.Puedes elegir un servicio que estes interezado.">
     <meta name="keywords" content="Portfolio , Diseño Gráfico,Reparacion PC, Editor Videos, Desarrollo Web, About-Me, Web Developer, Arg, 2023">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,8 +16,9 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="shortcut icon" href="../img/Favicon-Prototipo.png" type="image/x-icon">
 </head>
+<!-- Body servicios -->
 <body class="body-servicios">
-    <!-- HEADER -->
+    <!-- HEADER servicios-->
     <header class="header-index">
         <nav class="header__menu">
             <!-- Logotipo con enlace a home  -->
@@ -24,9 +26,11 @@
                 <a href="../index.html"><img class="header__divLogo--margin" src="../img/Logo-inicio.png"
                         alt="logo-inicio"></a>
             </div>
-                    <!-- --------ANIVERSARIO 1° AÑO CODICIONAL ----------------- -->
-                    <!-- <img src="../img/1-año-aniversario.jpg.png" alt="1° aniversario"> -->
-                    <!-- ----------------------------- ----------------- -->
+                <!-- --------------ANIVERSARIO 1° AÑO CODICIONAL ----------------- -->
+            <!--    <div class="container-sm">
+                    <img src="../img/1-año-aniversario.jpg.png" alt="1° aniversario">
+                    </div>   -->
+                <!------------------------------------------------- -->
             <!-- Seccion Menú navegable- despegable-resposive y enlaces a las páginas correspondientes -->
             <section class="navbar navbar-expand-lg header__menu__sector">
                 <div>
@@ -58,78 +62,97 @@
             </section>
         </nav>
     </header>
-    <!-- MAIN -->
+    <!-- MAIN servicios-->
     <main class="main-servicios">
-        <!-- Img editadas y aplicadas con BootStrap -->
-        <!-- CARD SERVICIO PC  -->
+        <!-- 3 Cards de servicios propuestos con iconos dinamicos -->
+        <!-- CARD SERVICIO Diseño grafico  -->
         <section class="card-servicios container">
             <div class="card mb-2" >
                 <div class="row g-0">
                     <div class="col-sm-2">
-                        <img src="../img/img-servicio-dg.jpg" class="img-fluid rounded-start" alt="img-servicio-diseño-gráfico">
+                        <img src="../img/img-Servicios/img-servicio-dg.jpg" class="img-fluid rounded-start" alt="img-servicio-diseño-gráfico">
                     </div>
                     <div class="col-sm-8">
                         <div class="card-body">
-                            <h5 class="card-title">Técnico en Comunicación visual y Diseño gráfico</h5>
+                            <h1 class="card-title"> <strong>Técnico en Comunicación visual y Diseño gráfico</strong></h1>
                             <p class="card-text"> Desde hace 4 años que estoy estudiando diseño y 2 año de resibido,
                                 este es mi servicio principal. Me especializo en areas de Brandig Marca o creacion de folleteria 
                                 (tripcticos, afiches o flayer). En la seccion de contratacion esta mas en detalle.
                             </p>
                             <p class="card-text"><small class="text-body-secondary">Tiempo en servicio: 2 años</small></p>
+                            <!-- Iconos del servicio DG de lo que puedo hacer -->
+                                <article class="icon-act-1">
+                                    <div class="icon-1"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-dg-1.png" alt="icono-folleto"><p>Papelería</p></div>
+                                    <div class="icon-2"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-dg-2.png" alt="icono-diseño"><p>Diseño</p></div>
+                                    <div class="icon-3"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-dg-3.png" alt="icono-branding"><p>Branding</p></div>
+                                </article>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- CARD SERVICIO PC -->
+            <!-- CARD SERVICIO Mantenimento y Reparacion de PC -->
             <div class="card mb-2">
                 <div class="row g-0">
                     <div class="col-sm-2">
-                        <img src="../img/img-servicio-pc.jpg.png" class="img-fluid rounded-start" alt="img-servicio-reparacion-pc">
+                        <img src="../img/img-Servicios/img-servicio-pc.png" class="img-fluid rounded-start" alt="img-servicio-reparacion-pc">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Técnico de relación de PC y mantenimiento de redes </h5>
+                            <h2 class="card-title"><strong>Técnico de relación de PC y mantenimiento de redes</strong> </h2>
                             <p class="card-text">En el año 2017-2018 realicé una capacitación de 2 años de Reparación de PC 
                                 y redes. Me especializo en el ensamblaje, limpieza o mantenimiento del Hardware. 
                                 También hago la instalación de S.O y  algunos software para su funcionamiento.  </p>
                             <p class="card-text"><small class="text-body-secondary">Tiempo en servicio: 3 años </small></p>
+                            <!-- Iconos del servicio de PC de lo que puedo hacer -->
+                            <article class="icon-act-2">
+                                <div class="icon-1"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-pc-1.png" alt="icono-CPU"><p>Ensamblaje</p></div>
+                                <div class="icon-2"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-pc-2.png" alt="icono-Router"><p>Redes </p></div>
+                                <div class="icon-3"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-pc-3.png" alt="icono-limpieza-hardware"><p>Limpieza PC</p></div>
+                            </article>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- CARD SERVICIO EDICION -->
+            <!-- CARD SERVICIO EDICION Audio Visual-->
             <div class="card mb-2" >
                 <div class="row g-0">
                     <div class="col-sm-2">
-                        <img src="../img/img-servicio-edit.jpg.png" class="img-fluid rounded-start" alt="img-servicio-editor">
+                        <img src="../img/img-Servicios/img-servicio-edit.png" class="img-fluid rounded-start" alt="img-servicio-editor">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Editor Audio Visual </h5>
+                            <h3 class="card-title"><strong>Editor Audio Visual </strong></h3>
                             <p class="card-text">Me dedico ocasionalmente a la edición de vídeos, ya sea para un evento o de
                                 forma particular o imagen de una empresa.
                                 Utilizo Adobe Premiere 2020, más otros programas para complementar mi trabajo. 
                             </p>
                             <p class="card-text"><small class="text-body-secondary">Tiempo en servicio: 4 años</small></p>
+                            <!-- Iconos del servicio de Editor de Audio y Video-->
+                            <article class="icon-act-3">
+                                <div class="icon-1"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-edicion-1.png" alt="icono-premiere-pro"><p>Premier Pro</p></div>
+                                <div class="icon-2"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-edicion-2.png" alt="icono-photoshop"><p>Photoshop</p></div>
+                                <div class="icon-3"><img src="../img/img-Servicios/Iconos servicios index/icon-serv-edicion-3.png" alt="icono-audacity"><p>Audacity</p></div>
+                            </article>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Mini Formulario de eleccion de servicios de manera rapida  -->
             <section class="mini-form-serv">
-            <form action="">
-                <section class="botones-servicio">
-                    <h4><strong>¿Cual de estos tres estas interezado/a? </strong></h4>
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-danger">Servicio de Diseño Grafico </button>
-                        <button type="button" class="btn btn-warning">Servicio de Edicion Audiovisual</button>
-                        <button type="button" class="btn btn-success">Servicio de Reparación de PC</button>
-                    </div>
-                    <input type="submit" class="enviar-servicios">
-                </section>
-            </form>
+                <form action="">
+                    <section class="botones-servicio">
+                        <h4><strong>¿Cual de estos tres estas interezado/a? </strong></h4>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="button" class="btn btn-danger">Servicio de Diseño Grafico </button>
+                            <button type="button" class="btn btn-warning">Servicio de Edicion Audiovisual</button>
+                            <button type="button" class="btn btn-success">Servicio de Reparación de PC</button>
+                        </div>
+                        <input type="submit" class="enviar-servicios">
+                    </section>
+                </form>
             </section>
         </section>
-            <!-- carousel de images servicios -->
+            <!-- carousel de images  de los 3 servicios + descripcion-->
         <section class="servicio-img">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
@@ -174,22 +197,23 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <section class="servicio-proximo">
-                <div class="card mb-4">
-                    <h3><strong><em>¡PRÓXIMAMENTE!</em></strong></h3>
-                    <img src="../img/Iconos servicios index/front-end.jpg" class="card-img-top" alt="Img-proximo-servicio">
-                    <div class="card-body">
-                    <h5 class="card-title">Desarollador WEB Front-End</h5>
-                    <p class="card-text"> Actualmente este 2023 me estoy capacitando para ser desarrollador web, este servicio estara disponible pronto.. </p>
+            <!-- CARD del proximo servicio disponible -->
+                <section class="servicio-proximo">
+                    <div class="card mb-4">
+                        <h5><strong><em>¡PRÓXIMAMENTE!</em></strong></h5>
+                        <img src="../img/img-Servicios/Iconos servicios index/front-end.jpg" class="card-img-top" alt="Img-proximo-servicio">
+                        <div class="card-body">
+                        <h6 class="card-title"><strong>Desarollador WEB Front-End</strong></h6>
+                        <p class="card-text"> Actualmente este 2023 me estoy capacitando para ser desarrollador web, este servicio estara disponible pronto.. </p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             </section>
         </section>
     </main>
-    <!-- FOOTER -->
+    <!-- FOOTER de servicios con enlace a inicio -->
     <footer class="footer-contacto">
-        <a  href="../index.html"><h3>HOME</h3></a>
+        <a  href="../index.html"><h3>INICIO</h3></a>
     </footer>
 </body>
 </html>

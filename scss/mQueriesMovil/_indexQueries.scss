@@ -8,7 +8,7 @@
         "main"
         "footer";
     }
-    /* header menu index */
+    /* header menu index con parametros  */
     .header__menu{
         grid-area: header;
         display:flex;
@@ -26,10 +26,9 @@
         }
     }
 
-    /* header con logo */
+    /* header  div del logo */
     .header__divLogo{
         padding: 0;
-        
         width: 100px;
         img{
             transition: none;
@@ -70,14 +69,14 @@
     /* Foto con margen para movil */
     .foto__abiel{
         grid-area: main;
-        margin: 15px 5px;
+        margin: 0;
           /* Foto con bordes movil */
         img{
-            margin: 0;
+            margin: 10px;
             grid-area: main;
             border-radius: 40px; 
-            width: 400px;
-            max-height: 600px;
+            width: 95%;
+            
             background-image: url(../img/Fotos-perfil/Foto-perfil-responsive.jpg);      
         }  
     }
@@ -85,7 +84,7 @@
     .section__info__personal{ 
         grid-area: main;    
         margin:10px;
-        padding: 0px;         
+        padding: 5px;         
         width: 100%;
          /* info personal parrafo movil */
         p{
@@ -95,9 +94,15 @@
         }   
     }
     /* Inconos de redes */
-    .section__icon__apps a img{
-        border-radius: 20px;
-        width: 55px;
+    .section__icon__apps {
+        border-radius: 10px;
+        padding: 0px;
+        width: 100%;
+        a{
+            width: 65px;
+            padding: 0px;
+            margin: 10px;
+        }
     }
     /* FOOTER INDEX RESPOSIVE  */
     .footer__index{
@@ -114,7 +119,7 @@
         margin-left: 200px;
         }
         img{
-            margin-left: 160px;
+            margin-left: 120px;
         }
          /* parrafo de img de los servicios */
         p{

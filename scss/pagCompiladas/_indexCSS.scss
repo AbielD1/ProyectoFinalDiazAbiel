@@ -1,4 +1,3 @@
-
 /*--------------------------------- INDEX CSS---------------------- */
 /* Body index*/
 .body-index{
@@ -21,6 +20,11 @@
     justify-content: space-around;
     align-items:center;           
     background-color: $fondo-perla;
+    h1{
+        font-size: 20px;
+        text-align: center;
+        font-family: "Roboto-Bold";
+    }
     /* Header menu con barra de nav */
     .navbar{
         width: 100%;
@@ -35,20 +39,18 @@
             justify-content:right;
             align-items: center;
             margin-bottom: 0;
-            padding: 0;
+            padding: 0px;
         }
         li{
             list-style-type: none;
-            width: 80px;
-            height: 80px;
+            width: 75px;
+            height: 75px;
             background: #fff;
             border-radius: 50px;
             animation: animate 3s ease-in-out infinite;
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            
         img{
             width: 80px;
             height: 80px;
@@ -64,13 +66,14 @@
         &:nth-child(3){
             animation-delay: -1000ms;
             background: $fondo-oscuro;
+            margin-left: 10px;
         }
         @keyframes animate {
             30%, 100% {
-                transform: scale(0.4);
+                transform: scale(0.5);
                 }
                 20% {
-                transform: scale(1);
+                transform: scale(1.1);
                 }
             }
         }
@@ -144,7 +147,8 @@
     grid-area: main;
     background-color: $fondo-dorado;     
     padding: 10px;
-    width: 800px;     
+    width: 800px;
+    border-radius: 10px;     
     /* TITULO info personal  */
     h1{
         font-family: "Nexa-Heavy";
@@ -167,18 +171,18 @@
     justify-content: center;
     padding: 10px;
      /* Separacion de iconos de redes y contactos */
-    a img{
+    a{
         width: 65px;
         padding: 5px;
-        margin: 2px;
-    }
-    button{
-        margin: 5px;
-        border-radius: 20px;
-        border-color: $fondo-amarillento;
-        transition: all 0.5s;
-        &:hover{
-            transform: scale(0.85);
+        margin: 10px;
+        img{
+            margin: 5px;
+            border-radius: 10px;
+            border-color: $fondo-amarillento;
+            transition: all 0.5s;
+            &:hover{
+                transform: scale(0.85);
+            }
         }
     }
 }

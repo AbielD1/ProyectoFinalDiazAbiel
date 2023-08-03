@@ -12,9 +12,11 @@
             margin-bottom: 5px;
         }
     }
+    /* header unico  */
     .header-index{
         grid-area: header ;
     }
+    /* Form main contenedor  */
     .main-form{
         grid-area: main;
         margin: 0px;
@@ -24,26 +26,31 @@
             font-size: 14px;
         }
     }
+    /* tamanio de texto  de los casillas de escritura */
     label{
         font-size: 16px;
     }
-    input,.inline{      
+    /* casillas de escritura */
+    input, .inline{      
         height: 20px;                    
         width: 100%;                             
     }
+    /* Margen de selectores en BS*/
     .form-select{
         margin: 0px ;     
     }
+    /* fondo contenedor del form  */
     .contratacion-form{
         grid-area: form;
         width: 100%;            
         padding:10px;
         background-color: $fondo-perla
     }
+    /* boton enviar  */
     input[id="submit"]{
         width: 100%;
-        margin-top: 15px;
-        margin-bottom: 20px;        
+        margin-top: 25px;
+        margin-bottom: 10px;        
         height: 40px;
         &:active{
             background-color: $fondo-amarillento;
@@ -53,7 +60,7 @@
     }
     /* fondo de los titulos del form */
     .opciones-servicios{
-        h3{
+        h2{
             font-size: 15px;
             padding: 12px;
         }
@@ -63,6 +70,7 @@
         text-align:center;
         margin-left:10px ;     
     }
+    /* Comentario de solicitud del servicio  */
     .msj-proyecto{
         h2{
             text-align:center;
@@ -76,8 +84,10 @@
             width: 100%;
         }
     }  
+    /* titulo servicio 1 */
     .titulo-01-serv{
-        h3{
+        h3{  
+            background-color: $fondo-amarillento;
             font-size: 15px;
             text-align: center;
             padding: 8px;
